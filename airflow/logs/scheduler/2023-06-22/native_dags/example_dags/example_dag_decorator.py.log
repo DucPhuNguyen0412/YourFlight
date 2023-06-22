@@ -77,3 +77,10 @@
 [2023-06-22T15:10:01.409+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:10:01.409+0700] {dag.py:2726} INFO - Sync 1 DAGs
 [2023-06-22T15:10:01.425+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:10:01.425+0700] {dag.py:3486} INFO - Setting next_dagrun for example_dag_decorator to None, run_after=None
 [2023-06-22T15:10:01.442+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/example_dag_decorator.py took 0.994 seconds
+[2023-06-22T15:14:11.939+0700] {processor.py:157} INFO - Started process (PID=13505) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/example_dag_decorator.py
+[2023-06-22T15:14:11.940+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/example_dag_decorator.py for tasks to queue
+[2023-06-22T15:14:11.941+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:14:11.941+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/example_dag_decorator.py
+[2023-06-22T15:14:12.262+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_dag_decorator']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/example_dag_decorator.py
+[2023-06-22T15:14:13.095+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:14:13.095+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T15:14:13.114+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:14:13.113+0700] {dag.py:3486} INFO - Setting next_dagrun for example_dag_decorator to None, run_after=None
+[2023-06-22T15:14:13.134+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/example_dag_decorator.py took 1.196 seconds

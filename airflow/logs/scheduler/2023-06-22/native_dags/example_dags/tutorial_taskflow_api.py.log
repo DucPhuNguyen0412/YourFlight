@@ -153,3 +153,10 @@
 [2023-06-22T15:12:31.891+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:12:31.890+0700] {dag.py:2726} INFO - Sync 1 DAGs
 [2023-06-22T15:12:31.906+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:12:31.906+0700] {dag.py:3486} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
 [2023-06-22T15:12:31.931+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.858 seconds
+[2023-06-22T15:14:38.147+0700] {processor.py:157} INFO - Started process (PID=13521) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2023-06-22T15:14:38.148+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2023-06-22T15:14:38.149+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:14:38.148+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2023-06-22T15:14:38.206+0700] {processor.py:836} INFO - DAG(s) dict_keys(['tutorial_taskflow_api']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2023-06-22T15:14:38.995+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:14:38.995+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T15:14:39.012+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:14:39.012+0700] {dag.py:3486} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2023-06-22T15:14:39.037+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.891 seconds
