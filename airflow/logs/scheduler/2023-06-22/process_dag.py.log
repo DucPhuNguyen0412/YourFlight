@@ -299,3 +299,10 @@ ModuleNotFoundError: No module named 'scripts'
 [2023-06-22T15:14:17.867+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:14:17.866+0700] {dag.py:2726} INFO - Sync 1 DAGs
 [2023-06-22T15:14:17.886+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:14:17.886+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
 [2023-06-22T15:14:17.911+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 2.132 seconds
+[2023-06-22T15:16:26.877+0700] {processor.py:157} INFO - Started process (PID=13583) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:16:26.878+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T15:16:26.879+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:16:26.879+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:16:27.806+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:16:28.567+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:16:28.567+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T15:16:28.585+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:16:28.585+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T15:16:28.602+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.725 seconds
