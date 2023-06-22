@@ -1,0 +1,140 @@
+[2023-06-22T10:36:00.729+0700] {processor.py:157} INFO - Started process (PID=2658) to work on /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+[2023-06-22T10:36:00.730+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py for tasks to queue
+[2023-06-22T10:36:00.731+0700] {logging_mixin.py:149} INFO - [2023-06-22T10:36:00.731+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+[2023-06-22T10:36:00.754+0700] {logging_mixin.py:149} INFO - [2023-06-22T10:36:00.752+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py", line 5, in <module>
+    from scripts.web_scraping.amazon_web_scarping import amazon_scrape_main
+ModuleNotFoundError: No module named 'scripts'
+[2023-06-22T10:36:00.754+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+[2023-06-22T10:36:01.529+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py took 0.800 seconds
+[2023-06-22T10:36:34.018+0700] {processor.py:157} INFO - Started process (PID=2682) to work on /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+[2023-06-22T10:36:34.019+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py for tasks to queue
+[2023-06-22T10:36:34.019+0700] {logging_mixin.py:149} INFO - [2023-06-22T10:36:34.019+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+[2023-06-22T10:36:34.049+0700] {logging_mixin.py:149} INFO - [2023-06-22T10:36:34.047+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py", line 5, in <module>
+    from scripts.web_scraping.amazon_web_scarping import amazon_scrape_main
+ModuleNotFoundError: No module named 'scripts'
+[2023-06-22T10:36:34.049+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+[2023-06-22T10:36:35.194+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py took 1.177 seconds
+[2023-06-22T10:37:06.943+0700] {processor.py:157} INFO - Started process (PID=2692) to work on /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+[2023-06-22T10:37:06.945+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py for tasks to queue
+[2023-06-22T10:37:06.946+0700] {logging_mixin.py:149} INFO - [2023-06-22T10:37:06.945+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+[2023-06-22T10:37:06.988+0700] {logging_mixin.py:149} INFO - [2023-06-22T10:37:06.980+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py", line 5, in <module>
+    from scripts.web_scraping.amazon_web_scarping import amazon_scrape_main
+ModuleNotFoundError: No module named 'scripts'
+[2023-06-22T10:37:06.988+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+[2023-06-22T10:37:08.148+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py took 1.206 seconds
+[2023-06-22T10:37:39.930+0700] {processor.py:157} INFO - Started process (PID=2747) to work on /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+[2023-06-22T10:37:39.931+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py for tasks to queue
+[2023-06-22T10:37:39.932+0700] {logging_mixin.py:149} INFO - [2023-06-22T10:37:39.932+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+[2023-06-22T10:37:39.961+0700] {logging_mixin.py:149} INFO - [2023-06-22T10:37:39.959+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py", line 5, in <module>
+    from scripts.web_scraping.amazon_web_scarping import amazon_scrape_main
+ModuleNotFoundError: No module named 'scripts'
+[2023-06-22T10:37:39.961+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+[2023-06-22T10:37:40.989+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py took 1.059 seconds
+[2023-06-22T10:38:12.681+0700] {processor.py:157} INFO - Started process (PID=2788) to work on /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+[2023-06-22T10:38:12.682+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py for tasks to queue
+[2023-06-22T10:38:12.682+0700] {logging_mixin.py:149} INFO - [2023-06-22T10:38:12.682+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+[2023-06-22T10:38:12.712+0700] {logging_mixin.py:149} INFO - [2023-06-22T10:38:12.711+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py", line 5, in <module>
+    from scripts.web_scraping.amazon_web_scarping import amazon_scrape_main
+ModuleNotFoundError: No module named 'scripts'
+[2023-06-22T10:38:12.713+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+[2023-06-22T10:38:13.832+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py took 1.152 seconds
+[2023-06-22T10:38:45.486+0700] {processor.py:157} INFO - Started process (PID=2797) to work on /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+[2023-06-22T10:38:45.488+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py for tasks to queue
+[2023-06-22T10:38:45.489+0700] {logging_mixin.py:149} INFO - [2023-06-22T10:38:45.489+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+[2023-06-22T10:38:45.532+0700] {logging_mixin.py:149} INFO - [2023-06-22T10:38:45.530+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py", line 5, in <module>
+    from scripts.web_scraping.amazon_web_scarping import amazon_scrape_main
+ModuleNotFoundError: No module named 'scripts'
+[2023-06-22T10:38:45.532+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+[2023-06-22T10:38:46.876+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py took 1.391 seconds
+[2023-06-22T10:39:18.850+0700] {processor.py:157} INFO - Started process (PID=2805) to work on /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+[2023-06-22T10:39:18.852+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py for tasks to queue
+[2023-06-22T10:39:18.853+0700] {logging_mixin.py:149} INFO - [2023-06-22T10:39:18.853+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+[2023-06-22T10:39:18.893+0700] {logging_mixin.py:149} INFO - [2023-06-22T10:39:18.891+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py", line 5, in <module>
+    from scripts.web_scraping.amazon_web_scarping import amazon_scrape_main
+ModuleNotFoundError: No module named 'scripts'
+[2023-06-22T10:39:18.894+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+[2023-06-22T10:39:20.243+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py took 1.394 seconds
+[2023-06-22T10:39:51.925+0700] {processor.py:157} INFO - Started process (PID=2813) to work on /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+[2023-06-22T10:39:51.926+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py for tasks to queue
+[2023-06-22T10:39:51.927+0700] {logging_mixin.py:149} INFO - [2023-06-22T10:39:51.927+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+[2023-06-22T10:39:51.957+0700] {logging_mixin.py:149} INFO - [2023-06-22T10:39:51.955+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py", line 5, in <module>
+    from scripts.web_scraping.amazon_web_scarping import amazon_scrape_main
+ModuleNotFoundError: No module named 'scripts'
+[2023-06-22T10:39:51.957+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+[2023-06-22T10:39:53.045+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py took 1.121 seconds
+[2023-06-22T10:40:24.356+0700] {processor.py:157} INFO - Started process (PID=2822) to work on /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+[2023-06-22T10:40:24.357+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py for tasks to queue
+[2023-06-22T10:40:24.358+0700] {logging_mixin.py:149} INFO - [2023-06-22T10:40:24.358+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+[2023-06-22T10:40:24.383+0700] {logging_mixin.py:149} INFO - [2023-06-22T10:40:24.382+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py", line 5, in <module>
+    from scripts.web_scraping.amazon_web_scarping import amazon_scrape_main
+ModuleNotFoundError: No module named 'scripts'
+[2023-06-22T10:40:24.383+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+[2023-06-22T10:40:25.186+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py took 0.831 seconds
+[2023-06-22T10:40:56.580+0700] {processor.py:157} INFO - Started process (PID=2827) to work on /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+[2023-06-22T10:40:56.581+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py for tasks to queue
+[2023-06-22T10:40:56.581+0700] {logging_mixin.py:149} INFO - [2023-06-22T10:40:56.581+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+[2023-06-22T10:40:56.602+0700] {logging_mixin.py:149} INFO - [2023-06-22T10:40:56.601+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py", line 5, in <module>
+    from scripts.web_scraping.amazon_web_scarping import amazon_scrape_main
+ModuleNotFoundError: No module named 'scripts'
+[2023-06-22T10:40:56.602+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
+[2023-06-22T10:40:57.376+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py took 0.796 seconds
