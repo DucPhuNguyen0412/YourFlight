@@ -391,3 +391,10 @@
 [2023-06-22T16:25:37.081+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:25:37.081+0700] {dag.py:2726} INFO - Sync 1 DAGs
 [2023-06-22T16:25:37.096+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:25:37.096+0700] {dag.py:3486} INFO - Setting next_dagrun for example_xcom to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
 [2023-06-22T16:25:37.114+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/example_xcom.py took 0.851 seconds
+[2023-06-22T16:27:37.521+0700] {processor.py:157} INFO - Started process (PID=15830) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/example_xcom.py
+[2023-06-22T16:27:37.521+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/example_xcom.py for tasks to queue
+[2023-06-22T16:27:37.522+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:27:37.522+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/example_xcom.py
+[2023-06-22T16:27:37.569+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_xcom']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/example_xcom.py
+[2023-06-22T16:27:38.242+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:27:38.242+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T16:27:38.256+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:27:38.256+0700] {dag.py:3486} INFO - Setting next_dagrun for example_xcom to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2023-06-22T16:27:38.271+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/example_xcom.py took 0.751 seconds

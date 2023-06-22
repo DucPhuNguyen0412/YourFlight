@@ -391,3 +391,10 @@
 [2023-06-22T16:25:27.094+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:25:27.093+0700] {dag.py:2726} INFO - Sync 1 DAGs
 [2023-06-22T16:25:27.112+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:25:27.111+0700] {dag.py:3486} INFO - Setting next_dagrun for tutorial_dag to None, run_after=None
 [2023-06-22T16:25:27.132+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/tutorial_dag.py took 0.967 seconds
+[2023-06-22T16:27:28.531+0700] {processor.py:157} INFO - Started process (PID=15826) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/tutorial_dag.py
+[2023-06-22T16:27:28.532+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/tutorial_dag.py for tasks to queue
+[2023-06-22T16:27:28.533+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:27:28.532+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/tutorial_dag.py
+[2023-06-22T16:27:28.563+0700] {processor.py:836} INFO - DAG(s) dict_keys(['tutorial_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/tutorial_dag.py
+[2023-06-22T16:27:29.276+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:27:29.275+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T16:27:29.294+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:27:29.294+0700] {dag.py:3486} INFO - Setting next_dagrun for tutorial_dag to None, run_after=None
+[2023-06-22T16:27:29.314+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/tutorial_dag.py took 0.784 seconds
