@@ -29,16 +29,19 @@ dag = DAG('amazon_scraper_dag',
 t1 = PythonOperator(
     task_id='amazon_scrape',
     python_callable=amazon_scrape_main,
+    provide_context=True,
     dag=dag)
 
 t2 = PythonOperator(
     task_id='process_data',
     python_callable=process_data_main,
+    provide_context=True,
     dag=dag)
 
 t3 = PythonOperator(
     task_id='query_data',
     python_callable=query_main,
+    provide_context=True,
     dag=dag)
 
 # Define the task dependencies.

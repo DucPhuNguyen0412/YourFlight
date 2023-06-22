@@ -21,17 +21,17 @@ def main():
     all_records_df = spark.sql("SELECT * FROM view")
     all_records_df.show()
 
-    # Check the count of records where the model is 'playstation 4'
-    print("Count of records where model = 'playstation 4':")
-    count_df = spark.sql("SELECT COUNT(*) FROM view WHERE model = 'playstation 4'")
-    count_df.show()
+    # Get the distinct model values from the dataframe
+    distinct_models = df.select("model").distinct().rdd.flatMap(lambda x: x).collect()
 
-    # Example query
-    result_df = spark.sql("SELECT * FROM view WHERE model = 'playstation 4'")
+    # Query for each distinct model
+    for model in distinct_models:
+        query = f"SELECT * FROM view WHERE model = '{model}'"
+        result_df = spark.sql(query)
 
-    # Show the result in the console
-    print("Query result:")
-    result_df.show()
+        # Show the query result for each model
+        print(f"Query result for model '{model}':")
+        result_df.show()
 
 if __name__ == "__main__":
     main()

@@ -306,3 +306,381 @@ ModuleNotFoundError: No module named 'scripts'
 [2023-06-22T15:16:28.567+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:16:28.567+0700] {dag.py:2726} INFO - Sync 1 DAGs
 [2023-06-22T15:16:28.585+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:16:28.585+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
 [2023-06-22T15:16:28.602+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.725 seconds
+[2023-06-22T15:18:28.392+0700] {processor.py:157} INFO - Started process (PID=13664) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:18:28.393+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T15:18:28.394+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:18:28.394+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:18:29.333+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:18:30.037+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:18:30.037+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T15:18:30.054+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:18:30.054+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T15:18:30.070+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.678 seconds
+[2023-06-22T15:20:30.486+0700] {processor.py:157} INFO - Started process (PID=13753) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:20:30.487+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T15:20:30.488+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:20:30.488+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:20:31.569+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:20:32.339+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:20:32.339+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T15:20:32.356+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:20:32.356+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T15:20:32.373+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.887 seconds
+[2023-06-22T15:22:30.811+0700] {processor.py:157} INFO - Started process (PID=13806) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:22:30.813+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T15:22:30.814+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:22:30.814+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:22:31.812+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:22:32.614+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:22:32.613+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T15:22:32.631+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:22:32.631+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T15:22:32.652+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.841 seconds
+[2023-06-22T15:24:53.845+0700] {processor.py:157} INFO - Started process (PID=13876) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:24:53.846+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T15:24:53.847+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:24:53.847+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:24:54.882+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:24:55.584+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:24:55.584+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T15:24:55.600+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:24:55.600+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T15:24:55.619+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.774 seconds
+[2023-06-22T15:27:07.939+0700] {processor.py:157} INFO - Started process (PID=13935) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:27:07.940+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T15:27:07.941+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:27:07.941+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:27:08.824+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:27:09.584+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:27:09.584+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T15:27:09.600+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:27:09.600+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T15:27:09.618+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.679 seconds
+[2023-06-22T15:29:13.621+0700] {processor.py:157} INFO - Started process (PID=13988) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:29:13.622+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T15:29:13.623+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:29:13.623+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:29:14.569+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:29:15.351+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:29:15.351+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T15:29:15.371+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:29:15.370+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T15:29:15.392+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.772 seconds
+[2023-06-22T15:31:20.247+0700] {processor.py:157} INFO - Started process (PID=14045) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:31:20.248+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T15:31:20.249+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:31:20.249+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:31:21.393+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:31:22.199+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:31:22.199+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T15:31:22.217+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:31:22.217+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T15:31:22.240+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.994 seconds
+[2023-06-22T15:33:24.227+0700] {processor.py:157} INFO - Started process (PID=14109) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:33:24.228+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T15:33:24.229+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:33:24.229+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:33:25.095+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:33:25.826+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:33:25.826+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T15:33:25.842+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:33:25.842+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T15:33:25.859+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.632 seconds
+[2023-06-22T15:35:28.622+0700] {processor.py:157} INFO - Started process (PID=14170) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:35:28.623+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T15:35:28.624+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:35:28.623+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:35:29.609+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:35:30.713+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:35:30.713+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T15:35:30.744+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:35:30.744+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T15:35:30.779+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 2.158 seconds
+[2023-06-22T15:37:35.165+0700] {processor.py:157} INFO - Started process (PID=14225) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:37:35.167+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T15:37:35.168+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:37:35.167+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:37:36.337+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:37:37.375+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:37:37.375+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T15:37:37.408+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:37:37.407+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T15:37:37.433+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 2.268 seconds
+[2023-06-22T15:39:49.059+0700] {processor.py:157} INFO - Started process (PID=14308) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:39:49.061+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T15:39:49.061+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:39:49.061+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:39:50.179+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:39:50.176+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py", line 6, in <module>
+    from src.scripts.spark.process_amazon_data import process_data_main
+ImportError: cannot import name 'process_data_main' from 'src.scripts.spark.process_amazon_data' (/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/process_amazon_data.py)
+[2023-06-22T15:39:50.179+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:39:51.153+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 2.095 seconds
+[2023-06-22T15:41:56.957+0700] {processor.py:157} INFO - Started process (PID=14366) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:41:56.959+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T15:41:56.960+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:41:56.959+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:41:57.989+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:41:57.986+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py", line 6, in <module>
+    from src.scripts.spark.process_amazon_data import process_data_main
+ImportError: cannot import name 'process_data_main' from 'src.scripts.spark.process_amazon_data' (/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/process_amazon_data.py)
+[2023-06-22T15:41:57.990+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:41:58.830+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.873 seconds
+[2023-06-22T15:44:09.092+0700] {processor.py:157} INFO - Started process (PID=14446) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:44:09.093+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T15:44:09.094+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:44:09.094+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:44:10.081+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:44:10.079+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py", line 6, in <module>
+    from src.scripts.spark.process_amazon_data import process_data_main
+ImportError: cannot import name 'process_data_main' from 'src.scripts.spark.process_amazon_data' (/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/process_amazon_data.py)
+[2023-06-22T15:44:10.082+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:44:10.871+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.780 seconds
+[2023-06-22T15:46:18.526+0700] {processor.py:157} INFO - Started process (PID=14505) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:46:18.527+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T15:46:18.528+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:46:18.528+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:46:19.566+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:46:19.564+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py", line 6, in <module>
+    from src.scripts.spark.process_amazon_data import process_data_main
+ImportError: cannot import name 'process_data_main' from 'src.scripts.spark.process_amazon_data' (/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/process_amazon_data.py)
+[2023-06-22T15:46:19.567+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:46:20.494+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.969 seconds
+[2023-06-22T15:48:29.747+0700] {processor.py:157} INFO - Started process (PID=14600) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:48:29.748+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T15:48:29.749+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:48:29.749+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:48:30.979+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:48:30.976+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py", line 6, in <module>
+    from src.scripts.spark.process_amazon_data import process_data_main
+ImportError: cannot import name 'process_data_main' from 'src.scripts.spark.process_amazon_data' (/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/process_amazon_data.py)
+[2023-06-22T15:48:30.979+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:48:32.247+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 2.501 seconds
+[2023-06-22T15:50:48.021+0700] {processor.py:157} INFO - Started process (PID=14671) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:50:48.023+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T15:50:48.024+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:50:48.024+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:50:49.125+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:50:49.123+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py", line 6, in <module>
+    from src.scripts.spark.process_amazon_data import process_data_main
+ImportError: cannot import name 'process_data_main' from 'src.scripts.spark.process_amazon_data' (/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/process_amazon_data.py)
+[2023-06-22T15:50:49.126+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:50:50.189+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 2.169 seconds
+[2023-06-22T15:53:06.253+0700] {processor.py:157} INFO - Started process (PID=14743) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:53:06.255+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T15:53:06.255+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:53:06.255+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:53:07.538+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:53:07.536+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py", line 6, in <module>
+    from src.scripts.spark.process_amazon_data import process_data_main
+ImportError: cannot import name 'process_data_main' from 'src.scripts.spark.process_amazon_data' (/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/process_amazon_data.py)
+[2023-06-22T15:53:07.538+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:53:08.626+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 2.373 seconds
+[2023-06-22T15:55:21.552+0700] {processor.py:157} INFO - Started process (PID=14851) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:55:21.553+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T15:55:21.554+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:55:21.554+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:55:22.597+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:55:22.595+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py", line 6, in <module>
+    from src.scripts.spark.process_amazon_data import process_data_main
+ImportError: cannot import name 'process_data_main' from 'src.scripts.spark.process_amazon_data' (/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/process_amazon_data.py)
+[2023-06-22T15:55:22.597+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:55:23.464+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.913 seconds
+[2023-06-22T15:57:38.109+0700] {processor.py:157} INFO - Started process (PID=14920) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:57:38.110+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T15:57:38.111+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:57:38.111+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:57:39.158+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:57:39.156+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py", line 6, in <module>
+    from src.scripts.spark.process_amazon_data import process_data_main
+ImportError: cannot import name 'process_data_main' from 'src.scripts.spark.process_amazon_data' (/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/process_amazon_data.py)
+[2023-06-22T15:57:39.159+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:57:40.068+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.960 seconds
+[2023-06-22T15:59:53.856+0700] {processor.py:157} INFO - Started process (PID=14978) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:59:53.858+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T15:59:53.859+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:59:53.859+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:59:54.890+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:59:54.888+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py", line 6, in <module>
+    from src.scripts.spark.process_amazon_data import process_data_main
+ImportError: cannot import name 'process_data_main' from 'src.scripts.spark.process_amazon_data' (/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/process_amazon_data.py)
+[2023-06-22T15:59:54.890+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:59:55.707+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.852 seconds
+[2023-06-22T16:02:09.507+0700] {processor.py:157} INFO - Started process (PID=15038) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:02:09.509+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T16:02:09.510+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:02:09.510+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:02:09.906+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:02:09.904+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py", line 6, in <module>
+    from src.scripts.spark.process_amazon_data import process_data_main
+ImportError: cannot import name 'process_data_main' from 'src.scripts.spark.process_amazon_data' (/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/process_amazon_data.py)
+[2023-06-22T16:02:09.906+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:02:10.686+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.179 seconds
+[2023-06-22T16:04:21.849+0700] {processor.py:157} INFO - Started process (PID=15099) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:04:21.851+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T16:04:21.851+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:04:21.851+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:04:22.241+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:04:22.239+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py", line 6, in <module>
+    from src.scripts.spark.process_amazon_data import process_data_main
+ImportError: cannot import name 'process_data_main' from 'src.scripts.spark.process_amazon_data' (/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/process_amazon_data.py)
+[2023-06-22T16:04:22.241+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:04:23.009+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.160 seconds
+[2023-06-22T16:06:28.987+0700] {processor.py:157} INFO - Started process (PID=15157) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:06:28.989+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T16:06:28.989+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:06:28.989+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:06:29.425+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:06:29.423+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py", line 6, in <module>
+    from src.scripts.spark.process_amazon_data import process_data_main
+ImportError: cannot import name 'process_data_main' from 'src.scripts.spark.process_amazon_data' (/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/process_amazon_data.py)
+[2023-06-22T16:06:29.426+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:06:30.196+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.209 seconds
+[2023-06-22T16:08:39.483+0700] {processor.py:157} INFO - Started process (PID=15219) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:08:39.485+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T16:08:39.485+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:08:39.485+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:08:39.873+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:08:39.871+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py", line 6, in <module>
+    from src.scripts.spark.process_amazon_data import process_data_main
+ImportError: cannot import name 'process_data_main' from 'src.scripts.spark.process_amazon_data' (/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/process_amazon_data.py)
+[2023-06-22T16:08:39.874+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:08:40.584+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.102 seconds
+[2023-06-22T16:10:43.503+0700] {processor.py:157} INFO - Started process (PID=15278) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:10:43.505+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T16:10:43.505+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:10:43.505+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:10:43.911+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:10:43.909+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py", line 6, in <module>
+    from src.scripts.spark.process_amazon_data import process_data_main
+ImportError: cannot import name 'process_data_main' from 'src.scripts.spark.process_amazon_data' (/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/process_amazon_data.py)
+[2023-06-22T16:10:43.911+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:10:44.615+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.112 seconds
+[2023-06-22T16:12:34.811+0700] {processor.py:157} INFO - Started process (PID=15332) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:12:34.811+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T16:12:34.812+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:12:34.812+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:12:35.070+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:12:35.070+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py", line 6, in <module>
+    from src.scripts.spark.process_amazon_data import process_data_main
+ImportError: cannot import name 'process_data_main' from 'src.scripts.spark.process_amazon_data' (/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/process_amazon_data.py)
+[2023-06-22T16:12:35.071+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:12:35.784+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 0.974 seconds
+[2023-06-22T16:14:35.365+0700] {processor.py:157} INFO - Started process (PID=15384) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:14:35.367+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T16:14:35.367+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:14:35.367+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:14:35.789+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:14:35.787+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py", line 6, in <module>
+    from src.scripts.spark.process_amazon_data import process_data_main
+ImportError: cannot import name 'process_data_main' from 'src.scripts.spark.process_amazon_data' (/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/process_amazon_data.py)
+[2023-06-22T16:14:35.789+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:14:36.572+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.207 seconds
+[2023-06-22T16:16:41.320+0700] {processor.py:157} INFO - Started process (PID=15440) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:16:41.321+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T16:16:41.322+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:16:41.322+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:16:41.798+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:16:41.796+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py", line 6, in <module>
+    from src.scripts.spark.process_amazon_data import process_data_main
+ImportError: cannot import name 'process_data_main' from 'src.scripts.spark.process_amazon_data' (/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/process_amazon_data.py)
+[2023-06-22T16:16:41.798+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:16:42.671+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.353 seconds
+[2023-06-22T16:18:55.347+0700] {processor.py:157} INFO - Started process (PID=15541) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:18:55.348+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T16:18:55.349+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:18:55.349+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:18:55.775+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:18:55.773+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py", line 6, in <module>
+    from src.scripts.spark.process_amazon_data import process_data_main
+ImportError: cannot import name 'process_data_main' from 'src.scripts.spark.process_amazon_data' (/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/process_amazon_data.py)
+[2023-06-22T16:18:55.775+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:18:56.651+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.305 seconds
+[2023-06-22T16:21:11.158+0700] {processor.py:157} INFO - Started process (PID=15600) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:21:11.159+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T16:21:11.160+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:21:11.160+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:21:12.043+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:21:12.041+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py", line 6, in <module>
+    from src.scripts.spark.process_amazon_data import process_data_main
+ImportError: cannot import name 'process_data_main' from 'src.scripts.spark.process_amazon_data' (/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/process_amazon_data.py)
+[2023-06-22T16:21:12.043+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:21:12.783+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.626 seconds
+[2023-06-22T16:23:11.199+0700] {processor.py:157} INFO - Started process (PID=15658) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:23:11.201+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T16:23:11.201+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:23:11.201+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:23:11.631+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:23:11.629+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py", line 6, in <module>
+    from src.scripts.spark.process_amazon_data import process_data_main
+ImportError: cannot import name 'process_data_main' from 'src.scripts.spark.process_amazon_data' (/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/process_amazon_data.py)
+[2023-06-22T16:23:11.631+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:23:12.395+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.197 seconds
+[2023-06-22T16:25:02.702+0700] {processor.py:157} INFO - Started process (PID=15707) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:25:02.703+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T16:25:02.703+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:25:02.703+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:25:02.999+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:25:02.998+0700] {dagbag.py:350} ERROR - Failed to import: /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+Traceback (most recent call last):
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py", line 6, in <module>
+    from src.scripts.spark.process_amazon_data import process_data_main
+ImportError: cannot import name 'process_data_main' from 'src.scripts.spark.process_amazon_data' (/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/process_amazon_data.py)
+[2023-06-22T16:25:02.999+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T16:25:03.722+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.021 seconds
