@@ -153,3 +153,10 @@
 [2023-06-22T15:13:26.790+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:13:26.789+0700] {dag.py:2726} INFO - Sync 1 DAGs
 [2023-06-22T15:13:26.807+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:13:26.807+0700] {dag.py:3486} INFO - Setting next_dagrun for example_sensors to None, run_after=None
 [2023-06-22T15:13:26.858+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/example_sensors.py took 0.980 seconds
+[2023-06-22T15:15:32.329+0700] {processor.py:157} INFO - Started process (PID=13553) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/example_sensors.py
+[2023-06-22T15:15:32.329+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-06-22T15:15:32.330+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:15:32.330+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/example_sensors.py
+[2023-06-22T15:15:32.364+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/example_sensors.py
+[2023-06-22T15:15:33.144+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:15:33.143+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T15:15:33.164+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:15:33.164+0700] {dag.py:3486} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-06-22T15:15:33.184+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/example_sensors.py took 0.855 seconds
