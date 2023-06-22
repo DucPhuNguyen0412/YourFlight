@@ -81,8 +81,15 @@ def amazon_scrape_main():
             links_list.append(link.get('href'))
 
         for link in links_list:
-            new_webpage = requests.get("https://www.amazon.com" + link, headers=HEADERS)
+            if link.startswith('https'):
+                new_webpage = requests.get(link, headers=HEADERS)
+            else:
+                new_webpage = requests.get("https://www.amazon.com" + link, headers=HEADERS)
+
             new_soup = BeautifulSoup(new_webpage.content, "html.parser")
+            
+            print("Webpage Status for Product Page:", new_webpage.status_code)  # Debug print
+            print("First 1000 characters of the product page content:", new_soup.prettify()[:1000])  # Debug print
 
             d['model'].append(model.replace("+", " "))  # Store the model in the dictionary
             d['title'].append(get_title(new_soup))
@@ -95,7 +102,6 @@ def amazon_scrape_main():
     amazon_df['title'].replace('', np.nan, inplace=True)
     amazon_df = amazon_df.dropna(subset=['title'])
     amazon_df.to_csv("/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/data/raw/amazon_data.csv", header=True, index=False)
-
 
 if __name__ == "__main__":
     amazon_scrape_main()

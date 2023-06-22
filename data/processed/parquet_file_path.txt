@@ -1,0 +1,1 @@
+/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/data/processed/amazon_data_20230622150947.parquet

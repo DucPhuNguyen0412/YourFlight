@@ -138,3 +138,157 @@ Traceback (most recent call last):
 ModuleNotFoundError: No module named 'scripts'
 [2023-06-22T10:40:56.602+0700] {processor.py:838} WARNING - No viable dags retrieved from /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py
 [2023-06-22T10:40:57.376+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents - Macbook’s MacBook Pro/ISTT/AirflowTutorial/prj/dags/process_dag.py took 0.796 seconds
+[2023-06-22T14:26:43.269+0700] {processor.py:157} INFO - Started process (PID=11833) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:26:43.271+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T14:26:43.271+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:26:43.271+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:26:44.310+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:26:45.186+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:26:45.185+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T14:26:45.203+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:26:45.203+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T14:26:45.221+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.953 seconds
+[2023-06-22T14:29:12.064+0700] {processor.py:157} INFO - Started process (PID=11914) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:29:12.065+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T14:29:12.066+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:29:12.066+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:29:13.016+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:29:13.785+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:29:13.785+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T14:29:13.800+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:29:13.800+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T14:29:13.818+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.754 seconds
+[2023-06-22T14:31:13.590+0700] {processor.py:157} INFO - Started process (PID=11984) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:31:13.592+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T14:31:13.592+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:31:13.592+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:31:14.660+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:31:15.725+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:31:15.725+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T14:31:15.766+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:31:15.766+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T14:31:15.797+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 2.208 seconds
+[2023-06-22T14:33:43.404+0700] {processor.py:157} INFO - Started process (PID=12117) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:33:43.405+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T14:33:43.406+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:33:43.405+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:33:44.536+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:33:45.571+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:33:45.571+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T14:33:45.592+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:33:45.592+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T14:33:45.611+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 2.209 seconds
+[2023-06-22T14:36:19.463+0700] {processor.py:157} INFO - Started process (PID=12260) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:36:19.464+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T14:36:19.465+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:36:19.465+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:36:20.749+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:36:22.055+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:36:22.055+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T14:36:22.077+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:36:22.077+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T14:36:22.101+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 2.639 seconds
+[2023-06-22T14:39:04.391+0700] {processor.py:157} INFO - Started process (PID=12385) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:39:04.392+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T14:39:04.392+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:39:04.392+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:39:05.530+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:39:06.610+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:39:06.609+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T14:39:06.628+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:39:06.628+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T14:39:06.648+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 2.258 seconds
+[2023-06-22T14:41:19.345+0700] {processor.py:157} INFO - Started process (PID=12500) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:41:19.347+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T14:41:19.347+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:41:19.347+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:41:20.252+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:41:21.150+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:41:21.150+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T14:41:21.166+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:41:21.166+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T14:41:21.182+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.838 seconds
+[2023-06-22T14:43:27.620+0700] {processor.py:157} INFO - Started process (PID=12555) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:43:27.621+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T14:43:27.622+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:43:27.622+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:43:28.802+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:43:30.213+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:43:30.212+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T14:43:30.247+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:43:30.246+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T14:43:30.279+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 2.660 seconds
+[2023-06-22T14:45:33.090+0700] {processor.py:157} INFO - Started process (PID=12609) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:45:33.090+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T14:45:33.091+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:45:33.091+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:45:33.910+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:45:34.714+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:45:34.714+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T14:45:34.731+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:45:34.731+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T14:45:34.749+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.660 seconds
+[2023-06-22T14:47:37.048+0700] {processor.py:157} INFO - Started process (PID=12664) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:47:37.049+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T14:47:37.050+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:47:37.050+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:47:38.103+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:47:38.944+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:47:38.943+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T14:47:38.960+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:47:38.960+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T14:47:38.985+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.938 seconds
+[2023-06-22T14:49:45.585+0700] {processor.py:157} INFO - Started process (PID=12732) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:49:45.586+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T14:49:45.587+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:49:45.587+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:49:46.517+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:49:47.335+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:49:47.335+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T14:49:47.356+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:49:47.355+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T14:49:47.380+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.795 seconds
+[2023-06-22T14:51:48.062+0700] {processor.py:157} INFO - Started process (PID=12787) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:51:48.065+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T14:51:48.065+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:51:48.065+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:51:49.163+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:51:50.024+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:51:50.023+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T14:51:50.043+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:51:50.042+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T14:51:50.061+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.999 seconds
+[2023-06-22T14:53:47.598+0700] {processor.py:157} INFO - Started process (PID=12841) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:53:47.599+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T14:53:47.600+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:53:47.599+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:53:48.547+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:53:49.281+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:53:49.280+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T14:53:49.296+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:53:49.296+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T14:53:49.312+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.715 seconds
+[2023-06-22T14:55:42.912+0700] {processor.py:157} INFO - Started process (PID=12895) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:55:42.914+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T14:55:42.914+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:55:42.914+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:55:43.925+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:55:44.670+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:55:44.670+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T14:55:44.687+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:55:44.686+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T14:55:44.711+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.799 seconds
+[2023-06-22T14:57:41.154+0700] {processor.py:157} INFO - Started process (PID=12947) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:57:41.156+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T14:57:41.157+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:57:41.157+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:57:42.155+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:57:42.969+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:57:42.968+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T14:57:42.986+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:57:42.985+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T14:57:43.002+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.850 seconds
+[2023-06-22T14:59:44.163+0700] {processor.py:157} INFO - Started process (PID=12999) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:59:44.164+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T14:59:44.165+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:59:44.165+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:59:45.452+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T14:59:46.435+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:59:46.435+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T14:59:46.458+0700] {logging_mixin.py:149} INFO - [2023-06-22T14:59:46.458+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T14:59:46.486+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 2.324 seconds
+[2023-06-22T15:01:47.734+0700] {processor.py:157} INFO - Started process (PID=13055) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:01:47.735+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T15:01:47.736+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:01:47.735+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:01:48.724+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:01:49.514+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:01:49.514+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T15:01:49.532+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:01:49.532+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T15:01:49.550+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.817 seconds
+[2023-06-22T15:03:50.836+0700] {processor.py:157} INFO - Started process (PID=13111) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:03:50.837+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T15:03:50.838+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:03:50.838+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:03:51.913+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:03:52.657+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:03:52.657+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T15:03:52.674+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:03:52.674+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T15:03:52.693+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.858 seconds
+[2023-06-22T15:05:55.129+0700] {processor.py:157} INFO - Started process (PID=13199) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:05:55.130+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T15:05:55.131+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:05:55.131+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:05:56.184+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:05:57.003+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:05:57.002+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T15:05:57.020+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:05:57.020+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T15:05:57.038+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.910 seconds
+[2023-06-22T15:08:01.880+0700] {processor.py:157} INFO - Started process (PID=13273) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:08:01.882+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T15:08:01.882+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:08:01.882+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:08:02.820+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:08:03.712+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:08:03.712+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T15:08:03.729+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:08:03.729+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T15:08:03.747+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.868 seconds
+[2023-06-22T15:10:03.825+0700] {processor.py:157} INFO - Started process (PID=13365) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:10:03.826+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T15:10:03.827+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:10:03.827+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:10:04.975+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:10:06.043+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:10:06.042+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T15:10:06.072+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:10:06.072+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T15:10:06.103+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 2.278 seconds
+[2023-06-22T15:12:10.744+0700] {processor.py:157} INFO - Started process (PID=13424) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:12:10.745+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py for tasks to queue
+[2023-06-22T15:12:10.746+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:12:10.746+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:12:11.660+0700] {processor.py:836} INFO - DAG(s) dict_keys(['amazon_scraper_dag']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py
+[2023-06-22T15:12:12.650+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:12:12.650+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T15:12:12.671+0700] {logging_mixin.py:149} INFO - [2023-06-22T15:12:12.671+0700] {dag.py:3486} INFO - Setting next_dagrun for amazon_scraper_dag to 2023-06-22T00:00:00+00:00, run_after=2023-06-25T00:00:00+00:00
+[2023-06-22T15:12:12.695+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/airflow/dags/process_dag.py took 1.951 seconds
