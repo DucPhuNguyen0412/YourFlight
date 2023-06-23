@@ -2,7 +2,7 @@ from datetime import datetime, timedelta
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 
-from src.scripts.web_scraping.amazon_web_scarping import amazon_scrape_main
+from src.scripts.web_scraping.amazon_web_scraping import amazon_scrape_main
 from src.scripts.spark.process_amazon_data import process_data_main
 from src.scripts.spark.query_parquet import main as query_main
 

@@ -12,14 +12,10 @@ def main():
 
     df.createOrReplaceTempView("view")
 
-    # Check schema
-    print("Dataframe schema:")
-    df.printSchema()
-
-    # Check all records
-    print("All records:")
-    all_records_df = spark.sql("SELECT * FROM view")
-    all_records_df.show()
+    # # Check all records
+    # print("All records:")
+    # all_records_df = spark.sql("SELECT * FROM view")
+    # all_records_df.show()
 
     # Get the distinct model values from the dataframe
     distinct_models = df.select("model").distinct().rdd.flatMap(lambda x: x).collect()

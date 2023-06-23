@@ -398,3 +398,10 @@
 [2023-06-22T16:27:32.433+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:27:32.433+0700] {dag.py:2726} INFO - Sync 1 DAGs
 [2023-06-22T16:27:32.450+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:27:32.450+0700] {dag.py:3486} INFO - Setting next_dagrun for tutorial to 2023-06-21T09:27:32.449920+00:00, run_after=2023-06-22T09:27:32.449920+00:00
 [2023-06-22T16:27:32.467+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/tutorial.py took 0.817 seconds
+[2023-06-22T16:46:39.994+0700] {processor.py:157} INFO - Started process (PID=16224) to work on /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/tutorial.py
+[2023-06-22T16:46:39.994+0700] {processor.py:826} INFO - Processing file /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/tutorial.py for tasks to queue
+[2023-06-22T16:46:39.995+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:46:39.995+0700] {dagbag.py:541} INFO - Filling up the DagBag from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/tutorial.py
+[2023-06-22T16:46:40.019+0700] {processor.py:836} INFO - DAG(s) dict_keys(['tutorial']) retrieved from /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/tutorial.py
+[2023-06-22T16:46:40.731+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:46:40.731+0700] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-22T16:46:40.746+0700] {logging_mixin.py:149} INFO - [2023-06-22T16:46:40.746+0700] {dag.py:3486} INFO - Setting next_dagrun for tutorial to 2023-06-21T09:46:40.746662+00:00, run_after=2023-06-22T09:46:40.746662+00:00
+[2023-06-22T16:46:40.763+0700] {processor.py:179} INFO - Processing /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/airflow/example_dags/tutorial.py took 0.770 seconds
