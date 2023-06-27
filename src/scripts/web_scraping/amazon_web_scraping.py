@@ -4,73 +4,58 @@ import requests
 import csv
 from itertools import cycle
 from get_proxies import get_proxies
-import time
 from fake_useragent import UserAgent
 from requests.exceptions import RequestException
 from concurrent.futures import ThreadPoolExecutor
 
-# Function to extract Product Title
-def get_title(soup):
-    try:
-        title = soup.find("span", attrs={"id":'productTitle'})
-        title_value = title.string
-        title_string = title_value.strip()
-    except AttributeError:
-        title_string = ""
-    return title_string
+from datetime import datetime
 
-# Function to extract Product Price
-def get_price(soup):
+# Function to extract Product Title from Search Result
+def get_search_title(item):
     try:
-        price = soup.find("span", attrs={'class': 'a-price'})
-        price_value = price.find("span", attrs={'class': 'a-offscreen'}).text.strip()
+        title = item.find("span", class_="a-size-base-plus a-color-base a-text-normal")
+        if title is None:  # If the first span class isn't found, try the second one
+            title = item.find("span", class_="a-size-medium a-color-base a-text-normal")
+        return title.text.strip()
     except AttributeError:
-        price_value = ""
-    return price_value
+        return ""
 
-# Function to extract Product Rating
-def get_rating(soup):
+# Function to extract Product Price from Search Result
+def get_search_price(item):
     try:
-        rating = soup.find("i", attrs={'class':'a-icon a-icon-star a-star-4-5'}).string.strip()
+        price = item.find("span", attrs={'class':'a-offscreen'}).text.strip()
     except AttributeError:
-        try:
-            rating = soup.find("span", attrs={'class':'a-icon-alt'}).string.strip()
-        except:
-            rating = ""
+        price = ""
+    return price
+
+# Function to extract Product Rating from Search Result
+def get_search_rating(item):
+    try:
+        rating = item.find("span", class_="a-icon-alt").text.strip()
+    except AttributeError:
+        rating = ""
     return rating
 
-# Function to extract Number of User Reviews
-def get_review_count(soup):
+# Function to extract Number of User Reviews from Search Result
+def get_search_review_count(item):
     try:
-        review_count = soup.find("span", attrs={'id':'acrCustomerReviewText'}).string.strip()
+        review_count = item.find("span", class_="a-size-base s-underline-text").text.strip()
     except AttributeError:
         review_count = ""
     return review_count
 
-# Function to extract Availability Status
-def get_availability(soup):
-    try:
-        available = soup.find("div", attrs={'id':'availability'})
-        available = available.find("span").string.strip()
-    except AttributeError:
-        available = "Not Available"
-    return available
-
-# Cache dictionary
-cache = {}
 
 def fetch_data_for_model(model, proxies):
     ua = UserAgent()
     proxy_pool = cycle(proxies)
-
-    if model in cache:
-        return cache[model]
+    start_time = datetime.now()
 
     data = []
     for _ in range(len(proxies)):  # To ensure we don't enter an infinite loop if all proxies fail
+        start_time1 = datetime.now()
         proxy = next(proxy_pool)
         headers = {'User-Agent': ua.random, 'Accept-Language': 'en-US, en;q=0.5'}
-        url = f"https://www.amazon.com/s?k={model}&ref=nb_sb_noss_2"
+        url = f"https://www.amazon.com/s?k={model}"
 
         try:
             response = requests.get(url, headers=headers, proxies={'http': proxy, 'https': proxy})
@@ -79,25 +64,27 @@ def fetch_data_for_model(model, proxies):
             continue  # Try next proxy
 
         soup = BeautifulSoup(response.content, "html.parser")
-        links = soup.find_all("a", attrs={'class':'a-link-normal s-no-outline'})
-        links_list = [link.get('href') for link in links]
+        items = soup.find_all("div", class_='a-section a-spacing-base')
 
-        for link in links_list:
-            try:
-                if link.startswith('https'):
-                    new_response = requests.get(link, headers=headers, proxies={'http': proxy, 'https': proxy})
-                else:
-                    new_response = requests.get("https://www.amazon.com" + link, headers=headers, proxies={'http': proxy, 'https': proxy})
-                new_response.raise_for_status()
-            except RequestException:
-                continue  # Skip this product and try next one
+        for item in items:
+            start_time2 = datetime.now()
+            title = get_search_title(item)
+            price = get_search_price(item)
+            rating = get_search_rating(item)
+            review_count = get_search_review_count(item)
 
-            new_soup = BeautifulSoup(new_response.content, "html.parser")
-            data.append([model.replace("+", " "), get_title(new_soup), get_price(new_soup), get_rating(new_soup), get_review_count(new_soup), get_availability(new_soup)])
-            print(f"Fetched data for model: {model}, Link: {link}")
-            
-        cache[model] = data
+            data.append([model.replace("+", " "), title, price, rating, review_count])
+            finish_time2 = datetime.now()
+            duration2 = finish_time2 - start_time2
+            print(f'for2 - duration {duration2}')
+            #print(f"Fetched data for model: {model}")
+        finish_time1 = datetime.now()
+        duration1 = finish_time1 - start_time1
+        print(f'for1 - duration {duration1}')
         break  # Successfully scraped this model, move on to the next one
+    finish_time = datetime.now()
+    duration = finish_time - start_time
+    print(f'fetch_model - duration {duration}')
     
     print(f"Completed fetching data for model: {model}")
     return data
@@ -120,7 +107,7 @@ if __name__ == "__main__":
     
     with open("/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/data/raw/amazon_data.csv", "w", newline='') as file:
         writer = csv.writer(file)
-        writer.writerow(["model", "title", "price", "rating", "reviews", "availability"])
+        writer.writerow(["model", "title", "price", "rating", "reviews"])
         writer.writerows(all_data)
 
     print("All data fetching completed")
