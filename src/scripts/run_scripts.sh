@@ -4,7 +4,12 @@
 echo "Enter the models to search for (separated by commas): "
 read models
 
-# Pass the models string directly to the Python script
-python3 /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/web_scraping/amazon_web_scraping.py "$models"
-python3 /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/process_amazon_data.py
-python3 /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/query_parquet.py
+# Split models by comma into an array
+IFS=',' read -ra model_array <<< "$models"
+
+# Pass each model to the Python scripts
+for model in "${model_array[@]}"; do
+    python3 /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/web_scraping/amazon_web_scraping.py "$model"
+    python3 /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/process_amazon_data.py "$model"
+    python3 /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/query_parquet.py "$model"
+done
