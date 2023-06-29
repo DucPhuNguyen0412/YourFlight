@@ -27,7 +27,7 @@ class AmazonSpider(scrapy.Spider):
         for item in response.css('div.a-section.a-spacing-base, div.a-section'):
             l = ItemLoader(item = AmazonItem(), selector=item)
             l.add_value('model', response.css('input#twotabsearchtextbox::attr(value)').get())
-            l.add_css('title', 'span.a-size-base-plus.a-color-base.a-text-normal::text')
+            l.add_css('title', 'span.a-size-base-plus.a-color-base.a-text-normal::text, span.a-size-medium.a-color-base.a-text-normal::text')
             l.add_css('price', 'span.a-offscreen::text')
             l.add_css('rating', 'span.a-icon-alt::text')
             l.add_css('reviews', 'span.a-size-base.s-underline-text::text')
@@ -50,6 +50,7 @@ if __name__ == "__main__":
     process = CrawlerProcess({
         'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15',
         'FEED_FORMAT': 'csv',
+        'FEED_EXPORT_FIELDS': ['model', 'title', 'price', 'rating', 'reviews']  # specify the order of fields
     })
 
     models = [model.strip() for model in args.models.split(',')]
