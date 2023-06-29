@@ -1,10 +1,7 @@
 import argparse
 import scrapy
-import random
 from scrapy.loader import ItemLoader
 from scrapy.crawler import CrawlerProcess
-from fake_useragent import UserAgent
-from get_proxies import get_proxies  # assuming get_proxies.py is in the same directory
 
 class AmazonItem(scrapy.Item):
     model = scrapy.Field()
@@ -20,12 +17,14 @@ class AmazonSpider(scrapy.Spider):
     def __init__(self, models=None, *args, **kwargs):
         super(AmazonSpider, self).__init__(*args, **kwargs)
         self.start_urls = [f"https://www.amazon.com/s?k={model}" for model in models.split(',')]
-        self.ua = UserAgent()
-        self.proxies = get_proxies()  # get the list of valid proxies
         self.page_number = 1  # track the current page number
 
+    def start_requests(self):
+        for url in self.start_urls:
+            yield scrapy.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15'})
+
     def parse(self, response):
-        for item in response.css('div.a-section.a-spacing-base'):
+        for item in response.css('div.a-section.a-spacing-base, div.a-section'):
             l = ItemLoader(item = AmazonItem(), selector=item)
             l.add_value('model', response.css('input#twotabsearchtextbox::attr(value)').get())
             l.add_css('title', 'span.a-size-base-plus.a-color-base.a-text-normal::text')
@@ -39,11 +38,9 @@ class AmazonSpider(scrapy.Spider):
         next_page_url = response.css('span.s-pagination-item.s-pagination-next a::attr(href)').get()
         if next_page_url and self.page_number < self.max_pages:
             self.page_number += 1
-            yield scrapy.Request(response.urljoin(next_page_url), callback=self.parse, headers={'User-Agent': self.ua.random, 'Proxy': random.choice(self.proxies)})
-            
-    def start_requests(self):
-        for url in self.start_urls:
-            yield scrapy.Request(url, headers={'User-Agent': self.ua.random, 'Proxy': random.choice(self.proxies)})
+            yield scrapy.Request(response.urljoin(next_page_url), 
+                                callback=self.parse, 
+                                headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15'})
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Scrape Amazon for product info")
@@ -51,7 +48,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     process = CrawlerProcess({
-        'USER_AGENT': UserAgent().random,
+        'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15',
         'FEED_FORMAT': 'csv',
     })
 
