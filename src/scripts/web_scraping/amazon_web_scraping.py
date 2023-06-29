@@ -16,8 +16,8 @@ class AmazonSpider(scrapy.Spider):
 
     def __init__(self, models=None, *args, **kwargs):
         super(AmazonSpider, self).__init__(*args, **kwargs)
-        self.start_urls = [f"https://www.amazon.com/s?k={model}" for model in models.split(',')]
-        self.page_number = 1  # track the current page number
+        self.models = models.split(',')
+        self.start_urls = [f"https://www.amazon.com/s?k={model}" for model in self.models]
 
     def start_requests(self):
         for url in self.start_urls:
@@ -54,7 +54,5 @@ if __name__ == "__main__":
     })
 
     models = [model.strip() for model in args.models.split(',')]
-    for model in models:
-        process.settings.set('FEED_URI', f"/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/data/raw/amazon_data_{model.replace(' ', '_')}.csv")
-        process.crawl(AmazonSpider, models=[model])
+    process.crawl(AmazonSpider, models=models)
     process.start()

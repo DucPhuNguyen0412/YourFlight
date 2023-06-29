@@ -27,7 +27,7 @@ class EbaySpider(scrapy.Spider):
         for item in response.css('div.s-item__wrapper'):
             l = ItemLoader(item=EbayItem(), selector=item)
             l.add_value('model', response.css('input#gh-ac::attr(value)').get())
-            l.add_css('title', 'div.s-item__title span[role="heading"]::text')  # updated title selector
+            l.add_css('title', 'div.s-item__title ::text')  # updated title selector
             l.add_css('price', '.s-item__price::text')
             l.add_css('rating', 'div.x-star-rating span.clipped::text')  # updated rating selector
             l.add_css('reviews', 'span.s-item__reviews-count span[aria-hidden="false"]::text')  # updated reviews selector
@@ -52,7 +52,5 @@ if __name__ == "__main__":
     })
 
     models = [model.strip() for model in args.models.split(',')]
-    for model in models:
-        process.settings.set('FEED_URI', f"/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/data/raw/ebay_data_{model.replace(' ', '_')}.csv")
-        process.crawl(EbaySpider, models=[model])
+    process.crawl(EbaySpider, models=models)
     process.start()
