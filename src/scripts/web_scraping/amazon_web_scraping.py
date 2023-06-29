@@ -56,5 +56,5 @@ if __name__ == "__main__":
     models = [model.strip() for model in args.models.split(',')]
     for model in models:
         process.settings.set('FEED_URI', f"/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/data/raw/amazon_data_{model.replace(' ', '_')}.csv")
-        process.crawl(AmazonSpider, models=model)
+        process.crawl(AmazonSpider, models=[model])
     process.start()
