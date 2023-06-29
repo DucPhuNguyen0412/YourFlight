@@ -1,8 +1,10 @@
 import argparse
 import scrapy
+import random
 from scrapy.loader import ItemLoader
 from scrapy.crawler import CrawlerProcess
 from fake_useragent import UserAgent
+from get_proxies import get_proxies  # assuming get_proxies.py is in the same directory
 
 class AmazonItem(scrapy.Item):
     model = scrapy.Field()
@@ -19,6 +21,8 @@ class AmazonSpider(scrapy.Spider):
         super(AmazonSpider, self).__init__(*args, **kwargs)
         self.start_urls = [f"https://www.amazon.com/s?k={model}" for model in models.split(',')]
         self.ua = UserAgent()
+        self.proxies = get_proxies()  # get the list of valid proxies
+        self.page_number = 1  # track the current page number
 
     def parse(self, response):
         for item in response.css('div.a-section.a-spacing-base'):
@@ -33,13 +37,13 @@ class AmazonSpider(scrapy.Spider):
 
         # handling pagination
         next_page_url = response.css('span.s-pagination-item.s-pagination-next a::attr(href)').get()
-        page_number = response.css('span.s-pagination-item.s-pagination-disabled::text').get()
-        if next_page_url and int(page_number) <= self.max_pages:
-            yield scrapy.Request(response.urljoin(next_page_url), callback=self.parse, headers={'User-Agent': self.ua.random})
-
+        if next_page_url and self.page_number < self.max_pages:
+            self.page_number += 1
+            yield scrapy.Request(response.urljoin(next_page_url), callback=self.parse, headers={'User-Agent': self.ua.random, 'Proxy': random.choice(self.proxies)})
+            
     def start_requests(self):
         for url in self.start_urls:
-            yield scrapy.Request(url, headers={'User-Agent': self.ua.random})
+            yield scrapy.Request(url, headers={'User-Agent': self.ua.random, 'Proxy': random.choice(self.proxies)})
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Scrape Amazon for product info")
@@ -49,11 +53,6 @@ if __name__ == "__main__":
     process = CrawlerProcess({
         'USER_AGENT': UserAgent().random,
         'FEED_FORMAT': 'csv',
-        'DOWNLOADER_MIDDLEWARES': {
-            'scrapy_proxy_pool.middlewares.ProxyPoolMiddleware': 610,
-            'scrapy_proxy_pool.middlewares.BanDetectionMiddleware': 620,
-        },
-        'PROXY_POOL_ENABLED': True,
     })
 
     models = [model.strip() for model in args.models.split(',')]
