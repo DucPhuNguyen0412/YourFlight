@@ -1,4 +1,5 @@
 import argparse
+import os
 import scrapy
 from scrapy.loader import ItemLoader
 from scrapy.crawler import CrawlerProcess
@@ -8,13 +9,26 @@ import pandas as pd
 from io import StringIO
 from botocore.exceptions import NoCredentialsError
 import logging
+from datetime import datetime
 
 # Setup logging
-logging.basicConfig(filename='scrapy.log', level=logging.INFO)
+log_file = '/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/web_scraping/log/amazon_scrapy.log'
 
-# Setup AWS credentials
+# Remove the previous log file if exists
+if os.path.exists(log_file):
+    os.remove(log_file)
+
+logging.basicConfig(filename=log_file, level=logging.INFO)
+
+# Load AWS credentials
+credentials = pd.read_csv('/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/web_scraping/nphu01_accessKeys.csv')
+
+# Setup AWS session
 try:
-    session = boto3.Session(profile_name='default')
+    session = boto3.Session(
+        aws_access_key_id=credentials['Access key ID'][0],
+        aws_secret_access_key=credentials['Secret access key'][0]
+    )
     s3 = session.client('s3')
 except NoCredentialsError:
     logging.error("Credentials not available")
@@ -30,17 +44,24 @@ class AmazonSpider(scrapy.Spider):
     name = "amazon_spider"
     max_pages = 5 # the maximum number of pages to scrape for each model
 
-    def __init__(self, models=None, bucket=None, *args, **kwargs):
-        super(AmazonSpider, self).__init__(*args, **kwargs)
-        self.models = models.split(',')
+    # User-Agent setup
+    user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15'
+
+    def __init__(self, models, bucket):
+        # check if models is a list or a string
+        if isinstance(models, list):
+            self.models = models
+        else:
+            self.models = models.split(',')
         self.bucket = bucket
+        super(AmazonSpider, self).__init__()
         self.start_urls = [f"https://www.amazon.com/s?k={model}" for model in self.models]
         self.items = []
         self.page_number = 1 # Initialize page number
 
     def start_requests(self):
         for url in self.start_urls:
-            yield scrapy.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15'})
+            yield scrapy.Request(url, headers={'User-Agent': self.user_agent})
 
     def parse(self, response):
         for item in response.css('div.a-section.a-spacing-base, div.a-section'):
@@ -59,7 +80,7 @@ class AmazonSpider(scrapy.Spider):
             self.page_number += 1
             yield scrapy.Request(response.urljoin(next_page_url), 
                                 callback=self.parse, 
-                                headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15'})
+                                headers={'User-Agent': self.user_agent})
 
     @classmethod
     def from_crawler(cls, crawler, *args, **kwargs):
@@ -76,7 +97,8 @@ class AmazonSpider(scrapy.Spider):
         df.to_csv(csv_buffer)
 
         # create the s3 key
-        csv_key = 'data/raw/amazon/amazon_raw_data.csv'
+        current_date = datetime.now().strftime('%Y-%m-%d')
+        csv_key = f'data/raw/amazon/{current_date}_amazon_raw_data.csv'
 
         # write data to S3
         s3.put_object(Bucket=self.bucket, Body=csv_buffer.getvalue(), Key=csv_key)
@@ -88,7 +110,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     process = CrawlerProcess({
-        'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15'
+        'USER_AGENT': AmazonSpider.user_agent
     })
 
     models = [model.strip() for model in args.models.split(',')]

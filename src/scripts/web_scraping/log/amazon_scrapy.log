@@ -1,0 +1,124 @@
+INFO:scrapy.utils.log:Scrapy 2.9.0 started (bot: scrapybot)
+INFO:scrapy.utils.log:Versions: lxml 4.9.2.0, libxml2 2.9.14, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.1, Twisted 22.10.0, Python 3.10.11 (v3.10.11:7d4cc5aa85, Apr  4 2023, 19:05:19) [Clang 13.0.0 (clang-1300.0.29.30)], pyOpenSSL 23.2.0 (OpenSSL 3.1.1 30 May 2023), cryptography 41.0.1, Platform macOS-13.0-x86_64-i386-64bit
+INFO:scrapy.crawler:Overridden settings:
+{'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) '
+               'AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 '
+               'Safari/605.1.15'}
+WARNING:py.warnings:/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/scrapy/utils/request.py:232: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+
+It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+
+See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+  return cls(crawler)
+
+DEBUG:scrapy.utils.log:Using reactor: twisted.internet.selectreactor.SelectReactor
+INFO:scrapy.extensions.telnet:Telnet Password: d2a08d9ac5962a49
+INFO:scrapy.middleware:Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+INFO:scrapy.middleware:Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO:scrapy.middleware:Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO:scrapy.middleware:Enabled item pipelines:
+[]
+INFO:scrapy.core.engine:Spider opened
+INFO:scrapy.extensions.logstats:Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+INFO:scrapy.extensions.telnet:Telnet console listening on 127.0.0.1:6023
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.amazon.com/s?k=table> (referer: None)
+INFO:scrapy.core.engine:Closing spider (finished)
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function validate_ascii_metadata at 0x10a543b50>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function sse_md5 at 0x10a542f80>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function convert_body_to_file_like_object at 0x10a55c4c0>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function validate_bucket_name at 0x10a542ef0>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x10a55cd30>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x11a496830>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function generate_idempotent_uuid at 0x10a542d40>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x10a55cee0>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x11a496830>>
+DEBUG:botocore.regions:Calling endpoint provider with parameters: {'Bucket': 'bestpricenphu', 'Region': 'us-east-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': True, 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+DEBUG:botocore.regions:Endpoint provider result: https://bestpricenphu.s3.amazonaws.com
+DEBUG:botocore.regions:Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+DEBUG:botocore.regions:Selected auth type "v4" as "v4" with signing context params: {'region': 'us-east-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <function conditionally_calculate_md5 at 0x10a3ed1b0>
+DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <function add_expect_header at 0x10a543250>
+DEBUG:botocore.handlers:Adding expect 100 continue header to request.
+DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <function add_recursion_detection_header at 0x10a5429e0>
+DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <function inject_api_version_header_if_needed at 0x10a55c5e0>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=PutObject) with params: {'url_path': '/data/raw/amazon/2023-07-11_amazon_raw_data.csv', 'query_string': {}, 'method': 'PUT', 'headers': {'User-Agent': 'Boto3/1.28.1 md/Botocore#1.31.1 ua/2.0 os/macos#22.1.0 md/arch#x86_64 lang/python#3.10.11 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.31.1', 'Content-MD5': '4iW3eESvFq7ktDfaoDXj8Q==', 'Expect': '100-continue'}, 'body': <_io.BytesIO object at 0x11a2fb330>, 'auth_path': '/bestpricenphu/data/raw/amazon/2023-07-11_amazon_raw_data.csv', 'url': 'https://bestpricenphu.s3.amazonaws.com/data/raw/amazon/2023-07-11_amazon_raw_data.csv', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x11a3f40d0>, 'has_streaming_input': True, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'bestpricenphu', 'params': {'Bucket': 'bestpricenphu', 'Body': <_io.BytesIO object at 0x11a2fb330>, 'Key': 'data/raw/amazon/2023-07-11_amazon_raw_data.csv'}}, 'signing': {'region': 'us-east-1', 'signing_name': 's3', 'disableDoubleEncoding': True}}}
+DEBUG:botocore.hooks:Event request-created.s3.PutObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x11a3206a0>>
+DEBUG:botocore.hooks:Event choose-signer.s3.PutObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x119b1a8c0>>
+DEBUG:botocore.hooks:Event choose-signer.s3.PutObject: calling handler <function set_operation_specific_signer at 0x10a542c20>
+DEBUG:botocore.hooks:Event before-sign.s3.PutObject: calling handler <function remove_arn_from_signing_path at 0x10a55ce50>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+PUT
+/data/raw/amazon/2023-07-11_amazon_raw_data.csv
+
+content-md5:4iW3eESvFq7ktDfaoDXj8Q==
+host:bestpricenphu.s3.amazonaws.com
+x-amz-content-sha256:UNSIGNED-PAYLOAD
+x-amz-date:20230711T163410Z
+
+content-md5;host;x-amz-content-sha256;x-amz-date
+UNSIGNED-PAYLOAD
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20230711T163410Z
+20230711/us-east-1/s3/aws4_request
+4d81a05f46910372d9ac368d5ae0af91065b7a38e914b3fd973046dc5783033a
+DEBUG:botocore.auth:Signature:
+f5fefc4a1499a8a129e442b3c42e78a0d45a016db5d1a76945c6e8673c568ef4
+DEBUG:botocore.hooks:Event request-created.s3.PutObject: calling handler <function add_retry_headers at 0x10a55cca0>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=PUT, url=https://bestpricenphu.s3.amazonaws.com/data/raw/amazon/2023-07-11_amazon_raw_data.csv, headers={'User-Agent': b'Boto3/1.28.1 md/Botocore#1.31.1 ua/2.0 os/macos#22.1.0 md/arch#x86_64 lang/python#3.10.11 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.31.1', 'Content-MD5': b'4iW3eESvFq7ktDfaoDXj8Q==', 'Expect': b'100-continue', 'X-Amz-Date': b'20230711T163410Z', 'X-Amz-Content-SHA256': b'UNSIGNED-PAYLOAD', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAV6IEX2Z6QRBLWLKQ/20230711/us-east-1/s3/aws4_request, SignedHeaders=content-md5;host;x-amz-content-sha256;x-amz-date, Signature=f5fefc4a1499a8a129e442b3c42e78a0d45a016db5d1a76945c6e8673c568ef4', 'amz-sdk-invocation-id': b'6801466a-2b9f-4b7b-8fa9-64da0769e179', 'amz-sdk-request': b'attempt=1', 'Content-Length': '46585'}>
+DEBUG:botocore.httpsession:Certificate path: /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/certifi/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): bestpricenphu.s3.amazonaws.com:443
+DEBUG:botocore.awsrequest:Waiting for 100 Continue response.
+DEBUG:botocore.awsrequest:100 Continue response seen, now sending request body.
+DEBUG:urllib3.connectionpool:https://bestpricenphu.s3.amazonaws.com:443 "PUT /data/raw/amazon/2023-07-11_amazon_raw_data.csv HTTP/1.1" 200 0
+DEBUG:botocore.parsers:Response headers: {'x-amz-id-2': 'xB6gURMBGreMHAFZ2STsdkgM8aMbXLzuBw9uzzeGWN9qGtKcKRIXThF/nadLgejepGClGeBVcRw=', 'x-amz-request-id': 'SPPVW1GSMR10KG5Y', 'Date': 'Tue, 11 Jul 2023 16:34:12 GMT', 'x-amz-server-side-encryption': 'AES256', 'ETag': '"e225b77844af16aee4b437daa035e3f1"', 'Server': 'AmazonS3', 'Content-Length': '0'}
+DEBUG:botocore.parsers:Response body:
+b''
+DEBUG:botocore.hooks:Event needs-retry.s3.PutObject: calling handler <botocore.retryhandler.RetryHandler object at 0x11a496770>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event needs-retry.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x11a496830>>
+INFO:scrapy.statscollectors:Dumping Scrapy stats:
+{'downloader/request_bytes': 306,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 178787,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 3.353823,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 7, 11, 16, 34, 10, 496964),
+ 'httpcompression/response_bytes': 1161690,
+ 'httpcompression/response_count': 1,
+ 'log_count/DEBUG': 41,
+ 'log_count/INFO': 10,
+ 'log_count/WARNING': 1,
+ 'memusage/max': 114511872,
+ 'memusage/startup': 114511872,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2023, 7, 11, 16, 34, 7, 143141)}
+INFO:scrapy.core.engine:Spider closed (finished)
