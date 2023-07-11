@@ -1,0 +1,966 @@
+usage: amazon_web_scraping.py [-h] models bucket
+amazon_web_scraping.py: error: the following arguments are required: bucket
+usage: ebay_web_scraping.py [-h] models bucket
+ebay_web_scraping.py: error: the following arguments are required: bucket
+23/07/11 00:14:31 WARN Utils: Your hostname, Macbooks-MacBook-Pro.local resolves to a loopback address: 127.0.2.2; using fd01:db8:1111:0:0:0:0:3 instead (on interface lo0)
+23/07/11 00:14:31 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+:: loading settings :: url = jar:file:/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /Users/macbook/.ivy2/cache
+The jars for the packages stored in: /Users/macbook/.ivy2/jars
+org.apache.hadoop#hadoop-aws added as a dependency
+com.amazonaws#aws-java-sdk added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-d8dd4a77-399e-4e15-b665-682299ccb0ea;1.0
+	confs: [default]
+	found org.apache.hadoop#hadoop-aws;3.2.0 in central
+	found com.amazonaws#aws-java-sdk-bundle;1.11.375 in central
+	found com.amazonaws#aws-java-sdk;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-dlm;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-core;1.11.375 in central
+	found commons-logging#commons-logging;1.1.3 in central
+	found org.apache.httpcomponents#httpclient;4.5.5 in central
+	found org.apache.httpcomponents#httpcore;4.4.9 in central
+	found commons-codec#commons-codec;1.10 in central
+	found software.amazon.ion#ion-java;1.0.2 in central
+	found com.fasterxml.jackson.core#jackson-databind;2.6.7.1 in central
+	found com.fasterxml.jackson.core#jackson-annotations;2.6.0 in central
+	found com.fasterxml.jackson.core#jackson-core;2.6.7 in central
+	found com.fasterxml.jackson.dataformat#jackson-dataformat-cbor;2.6.7 in central
+	found joda-time#joda-time;2.8.1 in central
+	found com.amazonaws#jmespath-java;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-macie;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-eks;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-mediatailor;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-neptune;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-pi;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-iot1clickprojects;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-iot1clickdevices;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-iotanalytics;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-acmpca;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-secretsmanager;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-fms;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-connect;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-transcribe;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-autoscalingplans;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-workmail;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-servicediscovery;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-cloud9;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-serverlessapplicationrepository;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-alexaforbusiness;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-resourcegroups;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-comprehend;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-translate;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-sagemaker;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-iotjobsdataplane;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-sagemakerruntime;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-kinesisvideo;1.11.375 in central
+	found io.netty#netty-codec-http;4.1.17.Final in central
+	found io.netty#netty-codec;4.1.17.Final in central
+	found io.netty#netty-transport;4.1.17.Final in central
+	found io.netty#netty-buffer;4.1.17.Final in central
+	found io.netty#netty-common;4.1.17.Final in central
+	found io.netty#netty-resolver;4.1.17.Final in central
+	found io.netty#netty-handler;4.1.17.Final in central
+	found com.amazonaws#aws-java-sdk-appsync;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-guardduty;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-mq;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-mediaconvert;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-mediastore;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-mediastoredata;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-medialive;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-mediapackage;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-costexplorer;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-pricing;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-mobile;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-cloudhsmv2;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-glue;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-migrationhub;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-dax;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-greengrass;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-athena;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-marketplaceentitlement;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-codestar;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-lexmodelbuilding;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-resourcegroupstaggingapi;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-pinpoint;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-xray;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-opsworkscm;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-support;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-simpledb;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-servicecatalog;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-servermigration;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-simpleworkflow;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-storagegateway;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-route53;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-s3;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-kms;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-importexport;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-sts;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-sqs;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-rds;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-redshift;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-elasticbeanstalk;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-glacier;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-sns;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-iam;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-datapipeline;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-elasticloadbalancing;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-elasticloadbalancingv2;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-emr;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-elasticache;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-elastictranscoder;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-ec2;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-dynamodb;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-budgets;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-cloudtrail;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-cloudwatch;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-logs;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-events;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-cognitoidentity;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-cognitosync;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-directconnect;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-cloudformation;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-cloudfront;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-clouddirectory;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-kinesis;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-opsworks;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-ses;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-autoscaling;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-cloudsearch;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-cloudwatchmetrics;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-codedeploy;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-codepipeline;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-config;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-lambda;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-ecs;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-ecr;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-cloudhsm;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-ssm;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-workspaces;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-machinelearning;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-directory;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-efs;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-codecommit;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-devicefarm;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-elasticsearch;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-waf;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-marketplacecommerceanalytics;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-inspector;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-iot;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-api-gateway;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-acm;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-gamelift;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-dms;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-marketplacemeteringservice;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-cognitoidp;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-discovery;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-applicationautoscaling;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-snowball;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-rekognition;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-polly;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-lightsail;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-stepfunctions;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-health;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-costandusagereport;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-codebuild;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-appstream;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-shield;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-batch;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-lex;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-mechanicalturkrequester;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-organizations;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-workdocs;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-models;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-swf-libraries;1.11.22 in central
+:: resolution report :: resolve 2746ms :: artifacts dl 65ms
+	:: modules in use:
+	com.amazonaws#aws-java-sdk;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-acm;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-acmpca;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-alexaforbusiness;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-api-gateway;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-applicationautoscaling;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-appstream;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-appsync;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-athena;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-autoscaling;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-autoscalingplans;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-batch;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-budgets;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-bundle;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-cloud9;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-clouddirectory;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-cloudformation;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-cloudfront;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-cloudhsm;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-cloudhsmv2;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-cloudsearch;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-cloudtrail;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-cloudwatch;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-cloudwatchmetrics;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-codebuild;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-codecommit;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-codedeploy;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-codepipeline;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-codestar;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-cognitoidentity;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-cognitoidp;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-cognitosync;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-comprehend;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-config;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-connect;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-core;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-costandusagereport;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-costexplorer;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-datapipeline;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-dax;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-devicefarm;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-directconnect;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-directory;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-discovery;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-dlm;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-dms;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-dynamodb;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-ec2;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-ecr;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-ecs;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-efs;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-eks;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-elasticache;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-elasticbeanstalk;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-elasticloadbalancing;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-elasticloadbalancingv2;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-elasticsearch;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-elastictranscoder;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-emr;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-events;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-fms;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-gamelift;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-glacier;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-glue;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-greengrass;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-guardduty;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-health;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-iam;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-importexport;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-inspector;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-iot;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-iot1clickdevices;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-iot1clickprojects;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-iotanalytics;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-iotjobsdataplane;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-kinesis;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-kinesisvideo;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-kms;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-lambda;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-lex;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-lexmodelbuilding;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-lightsail;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-logs;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-machinelearning;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-macie;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-marketplacecommerceanalytics;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-marketplaceentitlement;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-marketplacemeteringservice;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-mechanicalturkrequester;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-mediaconvert;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-medialive;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-mediapackage;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-mediastore;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-mediastoredata;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-mediatailor;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-migrationhub;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-mobile;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-models;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-mq;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-neptune;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-opsworks;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-opsworkscm;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-organizations;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-pi;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-pinpoint;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-polly;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-pricing;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-rds;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-redshift;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-rekognition;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-resourcegroups;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-resourcegroupstaggingapi;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-route53;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-s3;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-sagemaker;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-sagemakerruntime;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-secretsmanager;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-serverlessapplicationrepository;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-servermigration;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-servicecatalog;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-servicediscovery;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-ses;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-shield;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-simpledb;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-simpleworkflow;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-snowball;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-sns;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-sqs;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-ssm;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-stepfunctions;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-storagegateway;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-sts;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-support;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-swf-libraries;1.11.22 from central in [default]
+	com.amazonaws#aws-java-sdk-transcribe;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-translate;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-waf;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-workdocs;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-workmail;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-workspaces;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-xray;1.11.375 from central in [default]
+	com.amazonaws#jmespath-java;1.11.375 from central in [default]
+	com.fasterxml.jackson.core#jackson-annotations;2.6.0 from central in [default]
+	com.fasterxml.jackson.core#jackson-core;2.6.7 from central in [default]
+	com.fasterxml.jackson.core#jackson-databind;2.6.7.1 from central in [default]
+	com.fasterxml.jackson.dataformat#jackson-dataformat-cbor;2.6.7 from central in [default]
+	commons-codec#commons-codec;1.10 from central in [default]
+	commons-logging#commons-logging;1.1.3 from central in [default]
+	io.netty#netty-buffer;4.1.17.Final from central in [default]
+	io.netty#netty-codec;4.1.17.Final from central in [default]
+	io.netty#netty-codec-http;4.1.17.Final from central in [default]
+	io.netty#netty-common;4.1.17.Final from central in [default]
+	io.netty#netty-handler;4.1.17.Final from central in [default]
+	io.netty#netty-resolver;4.1.17.Final from central in [default]
+	io.netty#netty-transport;4.1.17.Final from central in [default]
+	joda-time#joda-time;2.8.1 from central in [default]
+	org.apache.hadoop#hadoop-aws;3.2.0 from central in [default]
+	org.apache.httpcomponents#httpclient;4.5.5 from central in [default]
+	org.apache.httpcomponents#httpcore;4.4.9 from central in [default]
+	software.amazon.ion#ion-java;1.0.2 from central in [default]
+	:: evicted modules:
+	commons-logging#commons-logging;1.2 by [commons-logging#commons-logging;1.1.3] in [default]
+	com.amazonaws#aws-java-sdk-simpleworkflow;1.11.22 by [com.amazonaws#aws-java-sdk-simpleworkflow;1.11.375] in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |  162  |   0   |   0   |   2   ||  160  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-d8dd4a77-399e-4e15-b665-682299ccb0ea
+	confs: [default]
+	0 artifacts copied, 160 already retrieved (0kB/29ms)
+23/07/11 00:14:40 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+23/07/11 00:14:50 WARN MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-s3a-file-system.properties,hadoop-metrics2.properties
+23/07/11 00:14:50 WARN FileSystem: Failed to initialize fileystem s3a://bestpricenphu/data/raw/amazon_data_table.csv: java.io.IOException: From option fs.s3a.aws.credentials.provider java.lang.ClassNotFoundException: Class org.apache.hadoop.fs.s3a.auth.IAMInstanceCredentialsProvider not found
+23/07/11 00:14:50 WARN FileStreamSink: Assume no metadata directory. Error while looking for metadata directory in the path: s3a://bestpricenphu/data/raw/amazon_data_table.csv.
+java.io.IOException: From option fs.s3a.aws.credentials.provider java.lang.ClassNotFoundException: Class org.apache.hadoop.fs.s3a.auth.IAMInstanceCredentialsProvider not found
+	at org.apache.hadoop.fs.s3a.S3AUtils.loadAWSProviderClasses(S3AUtils.java:631)
+	at org.apache.hadoop.fs.s3a.S3AUtils.createAWSCredentialProviderSet(S3AUtils.java:597)
+	at org.apache.hadoop.fs.s3a.S3AFileSystem.initialize(S3AFileSystem.java:257)
+	at org.apache.hadoop.fs.FileSystem.createFileSystem(FileSystem.java:3469)
+	at org.apache.hadoop.fs.FileSystem.access$300(FileSystem.java:174)
+	at org.apache.hadoop.fs.FileSystem$Cache.getInternal(FileSystem.java:3574)
+	at org.apache.hadoop.fs.FileSystem$Cache.get(FileSystem.java:3521)
+	at org.apache.hadoop.fs.FileSystem.get(FileSystem.java:540)
+	at org.apache.hadoop.fs.Path.getFileSystem(Path.java:365)
+	at org.apache.spark.sql.execution.streaming.FileStreamSink$.hasMetadata(FileStreamSink.scala:53)
+	at org.apache.spark.sql.execution.datasources.DataSource.resolveRelation(DataSource.scala:366)
+	at org.apache.spark.sql.DataFrameReader.loadV1Source(DataFrameReader.scala:229)
+	at org.apache.spark.sql.DataFrameReader.$anonfun$load$2(DataFrameReader.scala:211)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:211)
+	at org.apache.spark.sql.DataFrameReader.csv(DataFrameReader.scala:538)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.ClassNotFoundException: Class org.apache.hadoop.fs.s3a.auth.IAMInstanceCredentialsProvider not found
+	at org.apache.hadoop.conf.Configuration.getClassByName(Configuration.java:2592)
+	at org.apache.hadoop.conf.Configuration.getClasses(Configuration.java:2663)
+	at org.apache.hadoop.fs.s3a.S3AUtils.loadAWSProviderClasses(S3AUtils.java:628)
+	... 27 more
+23/07/11 00:14:50 WARN MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-s3a-file-system.properties,hadoop-metrics2.properties
+23/07/11 00:14:50 WARN FileSystem: Failed to initialize fileystem s3a://bestpricenphu/data/raw/amazon_data_table.csv: java.io.IOException: From option fs.s3a.aws.credentials.provider java.lang.ClassNotFoundException: Class org.apache.hadoop.fs.s3a.auth.IAMInstanceCredentialsProvider not found
+Traceback (most recent call last):
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/process_amazon_data.py", line 62, in <module>
+    process_amazon_data_main(model)
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/process_amazon_data.py", line 26, in process_amazon_data_main
+    df = spark.read.csv(f's3a://bestpricenphu/data/raw/amazon_data_{model_formatted}.csv', header=True, inferSchema=True)
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/pyspark/sql/readwriter.py", line 727, in csv
+    return self._df(self._jreader.csv(self._spark._sc._jvm.PythonUtils.toSeq(path)))
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/pyspark/errors/exceptions/captured.py", line 169, in deco
+    return f(*a, **kw)
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/py4j/protocol.py", line 326, in get_return_value
+    raise Py4JJavaError(
+py4j.protocol.Py4JJavaError: An error occurred while calling o36.csv.
+: java.io.IOException: From option fs.s3a.aws.credentials.provider java.lang.ClassNotFoundException: Class org.apache.hadoop.fs.s3a.auth.IAMInstanceCredentialsProvider not found
+	at org.apache.hadoop.fs.s3a.S3AUtils.loadAWSProviderClasses(S3AUtils.java:631)
+	at org.apache.hadoop.fs.s3a.S3AUtils.createAWSCredentialProviderSet(S3AUtils.java:597)
+	at org.apache.hadoop.fs.s3a.S3AFileSystem.initialize(S3AFileSystem.java:257)
+	at org.apache.hadoop.fs.FileSystem.createFileSystem(FileSystem.java:3469)
+	at org.apache.hadoop.fs.FileSystem.access$300(FileSystem.java:174)
+	at org.apache.hadoop.fs.FileSystem$Cache.getInternal(FileSystem.java:3574)
+	at org.apache.hadoop.fs.FileSystem$Cache.get(FileSystem.java:3521)
+	at org.apache.hadoop.fs.FileSystem.get(FileSystem.java:540)
+	at org.apache.hadoop.fs.Path.getFileSystem(Path.java:365)
+	at org.apache.spark.sql.execution.datasources.DataSource$.$anonfun$checkAndGlobPathIfNecessary$1(DataSource.scala:724)
+	at scala.collection.immutable.List.map(List.scala:293)
+	at org.apache.spark.sql.execution.datasources.DataSource$.checkAndGlobPathIfNecessary(DataSource.scala:722)
+	at org.apache.spark.sql.execution.datasources.DataSource.checkAndGlobPathIfNecessary(DataSource.scala:551)
+	at org.apache.spark.sql.execution.datasources.DataSource.resolveRelation(DataSource.scala:404)
+	at org.apache.spark.sql.DataFrameReader.loadV1Source(DataFrameReader.scala:229)
+	at org.apache.spark.sql.DataFrameReader.$anonfun$load$2(DataFrameReader.scala:211)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:211)
+	at org.apache.spark.sql.DataFrameReader.csv(DataFrameReader.scala:538)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.ClassNotFoundException: Class org.apache.hadoop.fs.s3a.auth.IAMInstanceCredentialsProvider not found
+	at org.apache.hadoop.conf.Configuration.getClassByName(Configuration.java:2592)
+	at org.apache.hadoop.conf.Configuration.getClasses(Configuration.java:2663)
+	at org.apache.hadoop.fs.s3a.S3AUtils.loadAWSProviderClasses(S3AUtils.java:628)
+	... 30 more
+
+23/07/11 00:14:53 WARN Utils: Your hostname, Macbooks-MacBook-Pro.local resolves to a loopback address: 127.0.2.2; using fd01:db8:1111:0:0:0:0:3 instead (on interface lo0)
+23/07/11 00:14:53 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+:: loading settings :: url = jar:file:/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /Users/macbook/.ivy2/cache
+The jars for the packages stored in: /Users/macbook/.ivy2/jars
+org.apache.hadoop#hadoop-aws added as a dependency
+com.amazonaws#aws-java-sdk added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-2a1d5266-a869-48b5-b4f6-7232d61c2752;1.0
+	confs: [default]
+	found org.apache.hadoop#hadoop-aws;3.2.0 in central
+	found com.amazonaws#aws-java-sdk-bundle;1.11.375 in central
+	found com.amazonaws#aws-java-sdk;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-dlm;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-core;1.11.375 in central
+	found commons-logging#commons-logging;1.1.3 in central
+	found org.apache.httpcomponents#httpclient;4.5.5 in central
+	found org.apache.httpcomponents#httpcore;4.4.9 in central
+	found commons-codec#commons-codec;1.10 in central
+	found software.amazon.ion#ion-java;1.0.2 in central
+	found com.fasterxml.jackson.core#jackson-databind;2.6.7.1 in central
+	found com.fasterxml.jackson.core#jackson-annotations;2.6.0 in central
+	found com.fasterxml.jackson.core#jackson-core;2.6.7 in central
+	found com.fasterxml.jackson.dataformat#jackson-dataformat-cbor;2.6.7 in central
+	found joda-time#joda-time;2.8.1 in central
+	found com.amazonaws#jmespath-java;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-macie;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-eks;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-mediatailor;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-neptune;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-pi;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-iot1clickprojects;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-iot1clickdevices;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-iotanalytics;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-acmpca;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-secretsmanager;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-fms;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-connect;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-transcribe;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-autoscalingplans;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-workmail;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-servicediscovery;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-cloud9;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-serverlessapplicationrepository;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-alexaforbusiness;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-resourcegroups;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-comprehend;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-translate;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-sagemaker;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-iotjobsdataplane;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-sagemakerruntime;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-kinesisvideo;1.11.375 in central
+	found io.netty#netty-codec-http;4.1.17.Final in central
+	found io.netty#netty-codec;4.1.17.Final in central
+	found io.netty#netty-transport;4.1.17.Final in central
+	found io.netty#netty-buffer;4.1.17.Final in central
+	found io.netty#netty-common;4.1.17.Final in central
+	found io.netty#netty-resolver;4.1.17.Final in central
+	found io.netty#netty-handler;4.1.17.Final in central
+	found com.amazonaws#aws-java-sdk-appsync;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-guardduty;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-mq;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-mediaconvert;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-mediastore;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-mediastoredata;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-medialive;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-mediapackage;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-costexplorer;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-pricing;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-mobile;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-cloudhsmv2;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-glue;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-migrationhub;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-dax;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-greengrass;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-athena;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-marketplaceentitlement;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-codestar;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-lexmodelbuilding;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-resourcegroupstaggingapi;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-pinpoint;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-xray;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-opsworkscm;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-support;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-simpledb;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-servicecatalog;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-servermigration;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-simpleworkflow;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-storagegateway;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-route53;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-s3;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-kms;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-importexport;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-sts;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-sqs;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-rds;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-redshift;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-elasticbeanstalk;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-glacier;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-sns;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-iam;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-datapipeline;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-elasticloadbalancing;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-elasticloadbalancingv2;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-emr;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-elasticache;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-elastictranscoder;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-ec2;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-dynamodb;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-budgets;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-cloudtrail;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-cloudwatch;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-logs;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-events;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-cognitoidentity;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-cognitosync;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-directconnect;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-cloudformation;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-cloudfront;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-clouddirectory;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-kinesis;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-opsworks;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-ses;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-autoscaling;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-cloudsearch;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-cloudwatchmetrics;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-codedeploy;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-codepipeline;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-config;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-lambda;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-ecs;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-ecr;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-cloudhsm;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-ssm;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-workspaces;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-machinelearning;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-directory;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-efs;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-codecommit;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-devicefarm;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-elasticsearch;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-waf;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-marketplacecommerceanalytics;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-inspector;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-iot;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-api-gateway;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-acm;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-gamelift;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-dms;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-marketplacemeteringservice;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-cognitoidp;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-discovery;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-applicationautoscaling;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-snowball;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-rekognition;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-polly;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-lightsail;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-stepfunctions;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-health;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-costandusagereport;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-codebuild;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-appstream;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-shield;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-batch;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-lex;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-mechanicalturkrequester;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-organizations;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-workdocs;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-models;1.11.375 in central
+	found com.amazonaws#aws-java-sdk-swf-libraries;1.11.22 in central
+:: resolution report :: resolve 2838ms :: artifacts dl 113ms
+	:: modules in use:
+	com.amazonaws#aws-java-sdk;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-acm;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-acmpca;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-alexaforbusiness;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-api-gateway;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-applicationautoscaling;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-appstream;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-appsync;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-athena;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-autoscaling;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-autoscalingplans;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-batch;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-budgets;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-bundle;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-cloud9;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-clouddirectory;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-cloudformation;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-cloudfront;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-cloudhsm;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-cloudhsmv2;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-cloudsearch;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-cloudtrail;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-cloudwatch;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-cloudwatchmetrics;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-codebuild;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-codecommit;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-codedeploy;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-codepipeline;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-codestar;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-cognitoidentity;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-cognitoidp;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-cognitosync;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-comprehend;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-config;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-connect;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-core;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-costandusagereport;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-costexplorer;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-datapipeline;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-dax;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-devicefarm;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-directconnect;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-directory;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-discovery;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-dlm;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-dms;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-dynamodb;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-ec2;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-ecr;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-ecs;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-efs;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-eks;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-elasticache;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-elasticbeanstalk;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-elasticloadbalancing;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-elasticloadbalancingv2;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-elasticsearch;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-elastictranscoder;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-emr;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-events;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-fms;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-gamelift;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-glacier;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-glue;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-greengrass;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-guardduty;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-health;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-iam;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-importexport;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-inspector;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-iot;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-iot1clickdevices;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-iot1clickprojects;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-iotanalytics;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-iotjobsdataplane;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-kinesis;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-kinesisvideo;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-kms;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-lambda;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-lex;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-lexmodelbuilding;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-lightsail;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-logs;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-machinelearning;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-macie;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-marketplacecommerceanalytics;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-marketplaceentitlement;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-marketplacemeteringservice;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-mechanicalturkrequester;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-mediaconvert;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-medialive;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-mediapackage;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-mediastore;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-mediastoredata;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-mediatailor;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-migrationhub;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-mobile;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-models;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-mq;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-neptune;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-opsworks;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-opsworkscm;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-organizations;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-pi;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-pinpoint;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-polly;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-pricing;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-rds;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-redshift;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-rekognition;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-resourcegroups;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-resourcegroupstaggingapi;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-route53;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-s3;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-sagemaker;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-sagemakerruntime;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-secretsmanager;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-serverlessapplicationrepository;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-servermigration;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-servicecatalog;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-servicediscovery;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-ses;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-shield;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-simpledb;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-simpleworkflow;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-snowball;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-sns;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-sqs;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-ssm;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-stepfunctions;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-storagegateway;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-sts;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-support;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-swf-libraries;1.11.22 from central in [default]
+	com.amazonaws#aws-java-sdk-transcribe;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-translate;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-waf;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-workdocs;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-workmail;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-workspaces;1.11.375 from central in [default]
+	com.amazonaws#aws-java-sdk-xray;1.11.375 from central in [default]
+	com.amazonaws#jmespath-java;1.11.375 from central in [default]
+	com.fasterxml.jackson.core#jackson-annotations;2.6.0 from central in [default]
+	com.fasterxml.jackson.core#jackson-core;2.6.7 from central in [default]
+	com.fasterxml.jackson.core#jackson-databind;2.6.7.1 from central in [default]
+	com.fasterxml.jackson.dataformat#jackson-dataformat-cbor;2.6.7 from central in [default]
+	commons-codec#commons-codec;1.10 from central in [default]
+	commons-logging#commons-logging;1.1.3 from central in [default]
+	io.netty#netty-buffer;4.1.17.Final from central in [default]
+	io.netty#netty-codec;4.1.17.Final from central in [default]
+	io.netty#netty-codec-http;4.1.17.Final from central in [default]
+	io.netty#netty-common;4.1.17.Final from central in [default]
+	io.netty#netty-handler;4.1.17.Final from central in [default]
+	io.netty#netty-resolver;4.1.17.Final from central in [default]
+	io.netty#netty-transport;4.1.17.Final from central in [default]
+	joda-time#joda-time;2.8.1 from central in [default]
+	org.apache.hadoop#hadoop-aws;3.2.0 from central in [default]
+	org.apache.httpcomponents#httpclient;4.5.5 from central in [default]
+	org.apache.httpcomponents#httpcore;4.4.9 from central in [default]
+	software.amazon.ion#ion-java;1.0.2 from central in [default]
+	:: evicted modules:
+	commons-logging#commons-logging;1.2 by [commons-logging#commons-logging;1.1.3] in [default]
+	com.amazonaws#aws-java-sdk-simpleworkflow;1.11.22 by [com.amazonaws#aws-java-sdk-simpleworkflow;1.11.375] in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |  162  |   0   |   0   |   2   ||  160  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-2a1d5266-a869-48b5-b4f6-7232d61c2752
+	confs: [default]
+	0 artifacts copied, 160 already retrieved (0kB/41ms)
+23/07/11 00:14:57 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+23/07/11 00:15:05 WARN MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-s3a-file-system.properties,hadoop-metrics2.properties
+23/07/11 00:15:05 WARN FileSystem: Failed to initialize fileystem s3a://bestpricenphu/data/raw/ebay/ebay_raw_data_table.csv: java.io.IOException: From option fs.s3a.aws.credentials.provider java.lang.ClassNotFoundException: Class org.apache.hadoop.fs.s3a.auth.IAMInstanceCredentialsProvider not found
+23/07/11 00:15:05 WARN FileStreamSink: Assume no metadata directory. Error while looking for metadata directory in the path: s3a://bestpricenphu/data/raw/ebay/ebay_raw_data_table.csv.
+java.io.IOException: From option fs.s3a.aws.credentials.provider java.lang.ClassNotFoundException: Class org.apache.hadoop.fs.s3a.auth.IAMInstanceCredentialsProvider not found
+	at org.apache.hadoop.fs.s3a.S3AUtils.loadAWSProviderClasses(S3AUtils.java:631)
+	at org.apache.hadoop.fs.s3a.S3AUtils.createAWSCredentialProviderSet(S3AUtils.java:597)
+	at org.apache.hadoop.fs.s3a.S3AFileSystem.initialize(S3AFileSystem.java:257)
+	at org.apache.hadoop.fs.FileSystem.createFileSystem(FileSystem.java:3469)
+	at org.apache.hadoop.fs.FileSystem.access$300(FileSystem.java:174)
+	at org.apache.hadoop.fs.FileSystem$Cache.getInternal(FileSystem.java:3574)
+	at org.apache.hadoop.fs.FileSystem$Cache.get(FileSystem.java:3521)
+	at org.apache.hadoop.fs.FileSystem.get(FileSystem.java:540)
+	at org.apache.hadoop.fs.Path.getFileSystem(Path.java:365)
+	at org.apache.spark.sql.execution.streaming.FileStreamSink$.hasMetadata(FileStreamSink.scala:53)
+	at org.apache.spark.sql.execution.datasources.DataSource.resolveRelation(DataSource.scala:366)
+	at org.apache.spark.sql.DataFrameReader.loadV1Source(DataFrameReader.scala:229)
+	at org.apache.spark.sql.DataFrameReader.$anonfun$load$2(DataFrameReader.scala:211)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:211)
+	at org.apache.spark.sql.DataFrameReader.csv(DataFrameReader.scala:538)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.ClassNotFoundException: Class org.apache.hadoop.fs.s3a.auth.IAMInstanceCredentialsProvider not found
+	at org.apache.hadoop.conf.Configuration.getClassByName(Configuration.java:2592)
+	at org.apache.hadoop.conf.Configuration.getClasses(Configuration.java:2663)
+	at org.apache.hadoop.fs.s3a.S3AUtils.loadAWSProviderClasses(S3AUtils.java:628)
+	... 27 more
+23/07/11 00:15:05 WARN MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-s3a-file-system.properties,hadoop-metrics2.properties
+23/07/11 00:15:05 WARN FileSystem: Failed to initialize fileystem s3a://bestpricenphu/data/raw/ebay/ebay_raw_data_table.csv: java.io.IOException: From option fs.s3a.aws.credentials.provider java.lang.ClassNotFoundException: Class org.apache.hadoop.fs.s3a.auth.IAMInstanceCredentialsProvider not found
+Traceback (most recent call last):
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/process_ebay_data.py", line 62, in <module>
+    process_ebay_data_main(model)
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/process_ebay_data.py", line 26, in process_ebay_data_main
+    df = spark.read.csv(f's3a://bestpricenphu/data/raw/ebay/ebay_raw_data_{model_formatted}.csv', header=True, inferSchema=True)
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/pyspark/sql/readwriter.py", line 727, in csv
+    return self._df(self._jreader.csv(self._spark._sc._jvm.PythonUtils.toSeq(path)))
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/pyspark/errors/exceptions/captured.py", line 169, in deco
+    return f(*a, **kw)
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/py4j/protocol.py", line 326, in get_return_value
+    raise Py4JJavaError(
+py4j.protocol.Py4JJavaError: An error occurred while calling o36.csv.
+: java.io.IOException: From option fs.s3a.aws.credentials.provider java.lang.ClassNotFoundException: Class org.apache.hadoop.fs.s3a.auth.IAMInstanceCredentialsProvider not found
+	at org.apache.hadoop.fs.s3a.S3AUtils.loadAWSProviderClasses(S3AUtils.java:631)
+	at org.apache.hadoop.fs.s3a.S3AUtils.createAWSCredentialProviderSet(S3AUtils.java:597)
+	at org.apache.hadoop.fs.s3a.S3AFileSystem.initialize(S3AFileSystem.java:257)
+	at org.apache.hadoop.fs.FileSystem.createFileSystem(FileSystem.java:3469)
+	at org.apache.hadoop.fs.FileSystem.access$300(FileSystem.java:174)
+	at org.apache.hadoop.fs.FileSystem$Cache.getInternal(FileSystem.java:3574)
+	at org.apache.hadoop.fs.FileSystem$Cache.get(FileSystem.java:3521)
+	at org.apache.hadoop.fs.FileSystem.get(FileSystem.java:540)
+	at org.apache.hadoop.fs.Path.getFileSystem(Path.java:365)
+	at org.apache.spark.sql.execution.datasources.DataSource$.$anonfun$checkAndGlobPathIfNecessary$1(DataSource.scala:724)
+	at scala.collection.immutable.List.map(List.scala:293)
+	at org.apache.spark.sql.execution.datasources.DataSource$.checkAndGlobPathIfNecessary(DataSource.scala:722)
+	at org.apache.spark.sql.execution.datasources.DataSource.checkAndGlobPathIfNecessary(DataSource.scala:551)
+	at org.apache.spark.sql.execution.datasources.DataSource.resolveRelation(DataSource.scala:404)
+	at org.apache.spark.sql.DataFrameReader.loadV1Source(DataFrameReader.scala:229)
+	at org.apache.spark.sql.DataFrameReader.$anonfun$load$2(DataFrameReader.scala:211)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:211)
+	at org.apache.spark.sql.DataFrameReader.csv(DataFrameReader.scala:538)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.ClassNotFoundException: Class org.apache.hadoop.fs.s3a.auth.IAMInstanceCredentialsProvider not found
+	at org.apache.hadoop.conf.Configuration.getClassByName(Configuration.java:2592)
+	at org.apache.hadoop.conf.Configuration.getClasses(Configuration.java:2663)
+	at org.apache.hadoop.fs.s3a.S3AUtils.loadAWSProviderClasses(S3AUtils.java:628)
+	... 30 more
+
+23/07/11 00:15:07 WARN Utils: Your hostname, Macbooks-MacBook-Pro.local resolves to a loopback address: 127.0.2.2; using fd01:db8:1111:0:0:0:0:3 instead (on interface lo0)
+23/07/11 00:15:07 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+23/07/11 00:15:08 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+23/07/11 00:15:10 WARN FileStreamSink: Assume no metadata directory. Error while looking for metadata directory in the path: s3a://bestpricenphu/data/processed/amazon/amazon_data_table.parquet.
+java.lang.RuntimeException: java.lang.ClassNotFoundException: Class org.apache.hadoop.fs.s3a.S3AFileSystem not found
+	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:2688)
+	at org.apache.hadoop.fs.FileSystem.getFileSystemClass(FileSystem.java:3431)
+	at org.apache.hadoop.fs.FileSystem.createFileSystem(FileSystem.java:3466)
+	at org.apache.hadoop.fs.FileSystem.access$300(FileSystem.java:174)
+	at org.apache.hadoop.fs.FileSystem$Cache.getInternal(FileSystem.java:3574)
+	at org.apache.hadoop.fs.FileSystem$Cache.get(FileSystem.java:3521)
+	at org.apache.hadoop.fs.FileSystem.get(FileSystem.java:540)
+	at org.apache.hadoop.fs.Path.getFileSystem(Path.java:365)
+	at org.apache.spark.sql.execution.streaming.FileStreamSink$.hasMetadata(FileStreamSink.scala:53)
+	at org.apache.spark.sql.execution.datasources.DataSource.resolveRelation(DataSource.scala:366)
+	at org.apache.spark.sql.DataFrameReader.loadV1Source(DataFrameReader.scala:229)
+	at org.apache.spark.sql.DataFrameReader.$anonfun$load$2(DataFrameReader.scala:211)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:211)
+	at org.apache.spark.sql.DataFrameReader.parquet(DataFrameReader.scala:563)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.ClassNotFoundException: Class org.apache.hadoop.fs.s3a.S3AFileSystem not found
+	at org.apache.hadoop.conf.Configuration.getClassByName(Configuration.java:2592)
+	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:2686)
+	... 26 more
+Traceback (most recent call last):
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/query_parquet.py", line 55, in <module>
+    main(model)
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/spark/query_parquet.py", line 32, in main
+    df_amazon = spark.read.parquet(parquet_file_amazon)
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/pyspark/sql/readwriter.py", line 531, in parquet
+    return self._df(self._jreader.parquet(_to_seq(self._spark._sc, paths)))
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/pyspark/errors/exceptions/captured.py", line 169, in deco
+    return f(*a, **kw)
+  File "/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/py4j/protocol.py", line 326, in get_return_value
+    raise Py4JJavaError(
+py4j.protocol.Py4JJavaError: An error occurred while calling o31.parquet.
+: java.lang.RuntimeException: java.lang.ClassNotFoundException: Class org.apache.hadoop.fs.s3a.S3AFileSystem not found
+	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:2688)
+	at org.apache.hadoop.fs.FileSystem.getFileSystemClass(FileSystem.java:3431)
+	at org.apache.hadoop.fs.FileSystem.createFileSystem(FileSystem.java:3466)
+	at org.apache.hadoop.fs.FileSystem.access$300(FileSystem.java:174)
+	at org.apache.hadoop.fs.FileSystem$Cache.getInternal(FileSystem.java:3574)
+	at org.apache.hadoop.fs.FileSystem$Cache.get(FileSystem.java:3521)
+	at org.apache.hadoop.fs.FileSystem.get(FileSystem.java:540)
+	at org.apache.hadoop.fs.Path.getFileSystem(Path.java:365)
+	at org.apache.spark.sql.execution.datasources.DataSource$.$anonfun$checkAndGlobPathIfNecessary$1(DataSource.scala:724)
+	at scala.collection.immutable.List.map(List.scala:293)
+	at org.apache.spark.sql.execution.datasources.DataSource$.checkAndGlobPathIfNecessary(DataSource.scala:722)
+	at org.apache.spark.sql.execution.datasources.DataSource.checkAndGlobPathIfNecessary(DataSource.scala:551)
+	at org.apache.spark.sql.execution.datasources.DataSource.resolveRelation(DataSource.scala:404)
+	at org.apache.spark.sql.DataFrameReader.loadV1Source(DataFrameReader.scala:229)
+	at org.apache.spark.sql.DataFrameReader.$anonfun$load$2(DataFrameReader.scala:211)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:211)
+	at org.apache.spark.sql.DataFrameReader.parquet(DataFrameReader.scala:563)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.ClassNotFoundException: Class org.apache.hadoop.fs.s3a.S3AFileSystem not found
+	at org.apache.hadoop.conf.Configuration.getClassByName(Configuration.java:2592)
+	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:2686)
+	... 29 more
+
