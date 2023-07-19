@@ -11,27 +11,21 @@ from botocore.exceptions import NoCredentialsError
 import logging
 from datetime import datetime
 
+def delete_old_files(bucket_name, folder):
+    s3 = boto3.resource('s3')
+    bucket = s3.Bucket(bucket_name)
+
+    for obj in bucket.objects.filter(Prefix=folder):
+        s3.Object(bucket_name, obj.key).delete()
+
 # Setup logging
 log_file = '/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/web_scraping/log/amazon_scrapy.log'
-
-# Remove the previous log file if exists
 if os.path.exists(log_file):
     os.remove(log_file)
-
 logging.basicConfig(filename=log_file, level=logging.INFO)
 
-# Load AWS credentials
-credentials = pd.read_csv('/Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/web_scraping/nphu01_accessKeys.csv')
-
-# Setup AWS session
-try:
-    session = boto3.Session(
-        aws_access_key_id=credentials['Access key ID'][0],
-        aws_secret_access_key=credentials['Secret access key'][0]
-    )
-    s3 = session.client('s3')
-except NoCredentialsError:
-    logging.error("Credentials not available")
+session = boto3.Session()
+s3 = session.client('s3')
 
 class AmazonItem(scrapy.Item):
     model = scrapy.Field()
@@ -109,6 +103,9 @@ if __name__ == "__main__":
     parser.add_argument("bucket", help="AWS S3 bucket to store the scraped data")
     args = parser.parse_args()
 
+    # delete old files from the S3 bucket folder
+    delete_old_files(args.bucket, 'data/raw/amazon')
+    
     process = CrawlerProcess({
         'USER_AGENT': AmazonSpider.user_agent
     })

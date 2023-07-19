@@ -21,7 +21,7 @@ def main(model):
     model_formatted = model.replace(' ', '_')
 
     # Define base parquet file paths in S3
-    base_parquet_dir_amazon = 's3a://bestpricenphu/data/processed/amazon/'
+    base_parquet_dir_amazon = 's3a://bestpricenphu/dataa/processed/amazon/'
     base_parquet_dir_ebay = 's3a://bestpricenphu/data/processed/ebay/'
 
     # Parquet file paths for this model
