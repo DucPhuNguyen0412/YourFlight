@@ -1,4 +1,5 @@
 INFO:botocore.credentials:Found credentials in shared credentials file: ~/.aws/credentials
+INFO:botocore.credentials:Found credentials in shared credentials file: ~/.aws/credentials
 INFO:scrapy.utils.log:Scrapy 2.9.0 started (bot: scrapybot)
 INFO:scrapy.utils.log:Versions: lxml 4.9.2.0, libxml2 2.9.14, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.1, Twisted 22.10.0, Python 3.10.11 (v3.10.11:7d4cc5aa85, Apr  4 2023, 19:05:19) [Clang 13.0.0 (clang-1300.0.29.30)], pyOpenSSL 23.2.0 (OpenSSL 3.1.1 30 May 2023), cryptography 41.0.1, Platform macOS-13.0-x86_64-i386-64bit
 INFO:scrapy.crawler:Overridden settings:
@@ -13,7 +14,7 @@ See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for 
   return cls(crawler)
 
 DEBUG:scrapy.utils.log:Using reactor: twisted.internet.selectreactor.SelectReactor
-INFO:scrapy.extensions.telnet:Telnet Password: a946a7dfd933e7c0
+INFO:scrapy.extensions.telnet:Telnet Password: 948c6e1e68950eca
 INFO:scrapy.middleware:Enabled extensions:
 ['scrapy.extensions.corestats.CoreStats',
  'scrapy.extensions.telnet.TelnetConsole',
@@ -48,83 +49,83 @@ DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.ebay.com/sch/i.html?_nkw
 DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.ebay.com/sch/i.html?_nkw=table&_pgn=4> (referer: https://www.ebay.com/sch/i.html?_nkw=table&_pgn=3)
 DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.ebay.com/sch/i.html?_nkw=table&_pgn=5> (referer: https://www.ebay.com/sch/i.html?_nkw=table&_pgn=4)
 INFO:scrapy.core.engine:Closing spider (finished)
-DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function validate_ascii_metadata at 0x10489b9a0>
-DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function sse_md5 at 0x10489add0>
-DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function convert_body_to_file_like_object at 0x1048b4310>
-DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function validate_bucket_name at 0x10489ad40>
-DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x1048b4b80>
-DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x1187f6ef0>>
-DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function generate_idempotent_uuid at 0x10489ab90>
-DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x1048b4d30>
-DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x1187f6ef0>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function validate_ascii_metadata at 0x1080a39a0>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function sse_md5 at 0x1080a2dd0>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function convert_body_to_file_like_object at 0x1080bc310>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function validate_bucket_name at 0x1080a2d40>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x1080bcb80>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x11bf0b640>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function generate_idempotent_uuid at 0x1080a2b90>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x1080bcd30>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x11bf0b640>>
 DEBUG:botocore.regions:Calling endpoint provider with parameters: {'Bucket': 'bestpricenphu', 'Region': 'us-east-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': True, 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
 DEBUG:botocore.regions:Endpoint provider result: https://bestpricenphu.s3.amazonaws.com
 DEBUG:botocore.regions:Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
 DEBUG:botocore.regions:Selected auth type "v4" as "v4" with signing context params: {'region': 'us-east-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
-DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <function conditionally_calculate_md5 at 0x104741000>
-DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <function add_expect_header at 0x10489b0a0>
+DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <function conditionally_calculate_md5 at 0x107f49000>
+DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <function add_expect_header at 0x1080a30a0>
 DEBUG:botocore.handlers:Adding expect 100 continue header to request.
-DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <function add_recursion_detection_header at 0x10489a830>
-DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <function inject_api_version_header_if_needed at 0x1048b4430>
-DEBUG:botocore.endpoint:Making request for OperationModel(name=PutObject) with params: {'url_path': '/data/raw/ebay/2023-07-20_ebay_raw_data.csv', 'query_string': {}, 'method': 'PUT', 'headers': {'User-Agent': 'Boto3/1.28.1 md/Botocore#1.31.1 ua/2.0 os/macos#22.1.0 md/arch#x86_64 lang/python#3.10.11 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.31.1', 'Content-MD5': 'JMzPWc0zaD+cTAsU3sY0EQ==', 'Expect': '100-continue'}, 'body': <_io.BytesIO object at 0x118677650>, 'auth_path': '/bestpricenphu/data/raw/ebay/2023-07-20_ebay_raw_data.csv', 'url': 'https://bestpricenphu.s3.amazonaws.com/data/raw/ebay/2023-07-20_ebay_raw_data.csv', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x1187948b0>, 'has_streaming_input': True, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'bestpricenphu', 'params': {'Bucket': 'bestpricenphu', 'Body': <_io.BytesIO object at 0x118677650>, 'Key': 'data/raw/ebay/2023-07-20_ebay_raw_data.csv'}}, 'signing': {'region': 'us-east-1', 'signing_name': 's3', 'disableDoubleEncoding': True}}}
-DEBUG:botocore.hooks:Event request-created.s3.PutObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x118699330>>
-DEBUG:botocore.hooks:Event choose-signer.s3.PutObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x113e63670>>
-DEBUG:botocore.hooks:Event choose-signer.s3.PutObject: calling handler <function set_operation_specific_signer at 0x10489aa70>
-DEBUG:botocore.hooks:Event before-sign.s3.PutObject: calling handler <function remove_arn_from_signing_path at 0x1048b4ca0>
+DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <function add_recursion_detection_header at 0x1080a2830>
+DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <function inject_api_version_header_if_needed at 0x1080bc430>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=PutObject) with params: {'url_path': '/data/raw/ebay/2023-07-22_ebay_raw_data.csv', 'query_string': {}, 'method': 'PUT', 'headers': {'User-Agent': 'Boto3/1.28.1 md/Botocore#1.31.1 ua/2.0 os/macos#22.1.0 md/arch#x86_64 lang/python#3.10.11 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.31.1', 'Content-MD5': 'CKjxh8nDjPyYJ3PljqWg2A==', 'Expect': '100-continue'}, 'body': <_io.BytesIO object at 0x11d3a8e50>, 'auth_path': '/bestpricenphu/data/raw/ebay/2023-07-22_ebay_raw_data.csv', 'url': 'https://bestpricenphu.s3.amazonaws.com/data/raw/ebay/2023-07-22_ebay_raw_data.csv', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x11beb5000>, 'has_streaming_input': True, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'bestpricenphu', 'params': {'Bucket': 'bestpricenphu', 'Body': <_io.BytesIO object at 0x11d3a8e50>, 'Key': 'data/raw/ebay/2023-07-22_ebay_raw_data.csv'}}, 'signing': {'region': 'us-east-1', 'signing_name': 's3', 'disableDoubleEncoding': True}}}
+DEBUG:botocore.hooks:Event request-created.s3.PutObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x11bdb9a80>>
+DEBUG:botocore.hooks:Event choose-signer.s3.PutObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x11759be20>>
+DEBUG:botocore.hooks:Event choose-signer.s3.PutObject: calling handler <function set_operation_specific_signer at 0x1080a2a70>
+DEBUG:botocore.hooks:Event before-sign.s3.PutObject: calling handler <function remove_arn_from_signing_path at 0x1080bcca0>
 DEBUG:botocore.auth:Calculating signature using v4 auth.
 DEBUG:botocore.auth:CanonicalRequest:
 PUT
-/data/raw/ebay/2023-07-20_ebay_raw_data.csv
+/data/raw/ebay/2023-07-22_ebay_raw_data.csv
 
-content-md5:JMzPWc0zaD+cTAsU3sY0EQ==
+content-md5:CKjxh8nDjPyYJ3PljqWg2A==
 host:bestpricenphu.s3.amazonaws.com
 x-amz-content-sha256:UNSIGNED-PAYLOAD
-x-amz-date:20230719T170605Z
+x-amz-date:20230722T162452Z
 
 content-md5;host;x-amz-content-sha256;x-amz-date
 UNSIGNED-PAYLOAD
 DEBUG:botocore.auth:StringToSign:
 AWS4-HMAC-SHA256
-20230719T170605Z
-20230719/us-east-1/s3/aws4_request
-6d467829b147943adf60df2b9377be1150e6db1a51d3ce87732f3159349f2f62
+20230722T162452Z
+20230722/us-east-1/s3/aws4_request
+19e5fab1c6054e176b34171c3a89666c3a544995e9110761946f44757290b677
 DEBUG:botocore.auth:Signature:
-ad81e92e34e17955507f4a6543f49121665b17a23827936f79240d94b5b0df0f
-DEBUG:botocore.hooks:Event request-created.s3.PutObject: calling handler <function add_retry_headers at 0x1048b4af0>
-DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=PUT, url=https://bestpricenphu.s3.amazonaws.com/data/raw/ebay/2023-07-20_ebay_raw_data.csv, headers={'User-Agent': b'Boto3/1.28.1 md/Botocore#1.31.1 ua/2.0 os/macos#22.1.0 md/arch#x86_64 lang/python#3.10.11 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.31.1', 'Content-MD5': b'JMzPWc0zaD+cTAsU3sY0EQ==', 'Expect': b'100-continue', 'X-Amz-Date': b'20230719T170605Z', 'X-Amz-Content-SHA256': b'UNSIGNED-PAYLOAD', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAV6IEX2Z6QRBLWLKQ/20230719/us-east-1/s3/aws4_request, SignedHeaders=content-md5;host;x-amz-content-sha256;x-amz-date, Signature=ad81e92e34e17955507f4a6543f49121665b17a23827936f79240d94b5b0df0f', 'amz-sdk-invocation-id': b'a8c4905e-e34b-471a-8054-1c2503531283', 'amz-sdk-request': b'attempt=1', 'Content-Length': '37842'}>
+4391a6275dbf40abef3da8a7a88d49e7f6f7bc1d66d0886bd8ef59d4750d4840
+DEBUG:botocore.hooks:Event request-created.s3.PutObject: calling handler <function add_retry_headers at 0x1080bcaf0>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=PUT, url=https://bestpricenphu.s3.amazonaws.com/data/raw/ebay/2023-07-22_ebay_raw_data.csv, headers={'User-Agent': b'Boto3/1.28.1 md/Botocore#1.31.1 ua/2.0 os/macos#22.1.0 md/arch#x86_64 lang/python#3.10.11 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.31.1', 'Content-MD5': b'CKjxh8nDjPyYJ3PljqWg2A==', 'Expect': b'100-continue', 'X-Amz-Date': b'20230722T162452Z', 'X-Amz-Content-SHA256': b'UNSIGNED-PAYLOAD', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAV6IEX2Z6QRBLWLKQ/20230722/us-east-1/s3/aws4_request, SignedHeaders=content-md5;host;x-amz-content-sha256;x-amz-date, Signature=4391a6275dbf40abef3da8a7a88d49e7f6f7bc1d66d0886bd8ef59d4750d4840', 'amz-sdk-invocation-id': b'225414ef-0b65-4fb6-b39e-3e050442c5b0', 'amz-sdk-request': b'attempt=1', 'Content-Length': '38217'}>
 DEBUG:botocore.httpsession:Certificate path: /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/envlibs/lib/python3.10/site-packages/certifi/cacert.pem
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): bestpricenphu.s3.amazonaws.com:443
 DEBUG:botocore.awsrequest:Waiting for 100 Continue response.
 DEBUG:botocore.awsrequest:100 Continue response seen, now sending request body.
-DEBUG:urllib3.connectionpool:https://bestpricenphu.s3.amazonaws.com:443 "PUT /data/raw/ebay/2023-07-20_ebay_raw_data.csv HTTP/1.1" 200 0
-DEBUG:botocore.parsers:Response headers: {'x-amz-id-2': 'F8DuSLodMzG4EhOW3jZV8s2JEQOr/ryIHKGVnOfwn+bRnHWrPH1uDFPkKbb/Fc+8wNUowIZMubQ=', 'x-amz-request-id': '31BJE8PT8QTBSQ0X', 'Date': 'Wed, 19 Jul 2023 17:06:08 GMT', 'x-amz-server-side-encryption': 'AES256', 'ETag': '"24cccf59cd33683f9c4c0b14dec63411"', 'Server': 'AmazonS3', 'Content-Length': '0'}
+DEBUG:urllib3.connectionpool:https://bestpricenphu.s3.amazonaws.com:443 "PUT /data/raw/ebay/2023-07-22_ebay_raw_data.csv HTTP/1.1" 200 0
+DEBUG:botocore.parsers:Response headers: {'x-amz-id-2': 'T4DF6mZSu0ywITA5QFb6siEF+B1iE/LpkfEcLjHQTjS6S71gGGDCFlzo4oeEEesE2Q1l54qRG4U=', 'x-amz-request-id': '9ZB5MBAG6XZCVPQX', 'Date': 'Sat, 22 Jul 2023 16:24:54 GMT', 'x-amz-server-side-encryption': 'AES256', 'ETag': '"08a8f187c9c38cfc982773e58ea5a0d8"', 'Server': 'AmazonS3', 'Content-Length': '0'}
 DEBUG:botocore.parsers:Response body:
 b''
-DEBUG:botocore.hooks:Event needs-retry.s3.PutObject: calling handler <botocore.retryhandler.RetryHandler object at 0x1187f6e30>
+DEBUG:botocore.hooks:Event needs-retry.s3.PutObject: calling handler <botocore.retryhandler.RetryHandler object at 0x11bf0b580>
 DEBUG:botocore.retryhandler:No retry needed.
-DEBUG:botocore.hooks:Event needs-retry.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x1187f6ef0>>
+DEBUG:botocore.hooks:Event needs-retry.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x11bf0b640>>
 INFO:scrapy.statscollectors:Dumping Scrapy stats:
-{'downloader/request_bytes': 7700,
+{'downloader/request_bytes': 7703,
  'downloader/request_count': 5,
  'downloader/request_method_count/GET': 5,
- 'downloader/response_bytes': 1101525,
+ 'downloader/response_bytes': 1319009,
  'downloader/response_count': 5,
  'downloader/response_status_count/200': 5,
- 'elapsed_time_seconds': 17.650351,
+ 'elapsed_time_seconds': 8.93213,
  'finish_reason': 'finished',
- 'finish_time': datetime.datetime(2023, 7, 19, 17, 6, 5, 557610),
- 'httpcompression/response_bytes': 5703992,
+ 'finish_time': datetime.datetime(2023, 7, 22, 16, 24, 52, 580514),
+ 'httpcompression/response_bytes': 6621167,
  'httpcompression/response_count': 5,
  'log_count/DEBUG': 45,
  'log_count/INFO': 10,
  'log_count/WARNING': 1,
- 'memusage/max': 114167808,
- 'memusage/startup': 114167808,
+ 'memusage/max': 126124032,
+ 'memusage/startup': 126119936,
  'request_depth_max': 4,
  'response_received_count': 5,
  'scheduler/dequeued': 5,
  'scheduler/dequeued/memory': 5,
  'scheduler/enqueued': 5,
  'scheduler/enqueued/memory': 5,
- 'start_time': datetime.datetime(2023, 7, 19, 17, 5, 47, 907259)}
+ 'start_time': datetime.datetime(2023, 7, 22, 16, 24, 43, 648384)}
 INFO:scrapy.core.engine:Spider closed (finished)

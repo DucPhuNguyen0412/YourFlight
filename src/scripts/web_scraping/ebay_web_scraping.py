@@ -7,7 +7,6 @@ from scrapy import signals
 import boto3
 import pandas as pd
 from io import StringIO
-from botocore.exceptions import NoCredentialsError
 import logging
 from datetime import datetime
 

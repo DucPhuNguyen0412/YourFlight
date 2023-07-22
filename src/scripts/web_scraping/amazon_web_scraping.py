@@ -7,7 +7,6 @@ from scrapy import signals
 import boto3
 import pandas as pd
 from io import StringIO
-from botocore.exceptions import NoCredentialsError
 import logging
 from datetime import datetime
 
@@ -62,11 +61,12 @@ class AmazonSpider(scrapy.Spider):
             l = ItemLoader(item = AmazonItem(), selector=item)
             l.add_value('model', response.css('input#twotabsearchtextbox::attr(value)').get())
             l.add_css('title', 'span.a-size-base-plus.a-color-base.a-text-normal::text, span.a-size-medium.a-color-base.a-text-normal::text')
-            l.add_css('price', 'span.a-offscreen::text')
-            l.add_css('rating', 'span.a-icon-alt::text')
-            l.add_css('reviews', 'span.a-size-base.s-underline-text::text')
+            l.add_css('price', 'span.a-price-whole::text, span.a-price-fraction::text')
+            l.add_css('rating', 'i.a-icon.a-icon-star-small.a-star-small-4-5.aok-align-bottom span.a-icon-alt::text')
+            l.add_css('reviews', 'a.a-link-normal.s-underline-text.s-underline-link-text.s-link-style span.a-size-base.s-underline-text::text')
 
             self.items.append(l.load_item())
+
 
         # handling pagination
         next_page_url = response.css('span.s-pagination-item.s-pagination-next a::attr(href)').get()
