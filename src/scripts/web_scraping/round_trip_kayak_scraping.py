@@ -3,7 +3,8 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import json
 import boto3
-from datetime import datetime
+from datetime import datetime, timedelta
+import pandas as pd
 
 origin = input("Enter the origin: ")
 destination = input("Enter the destination: ")
@@ -11,11 +12,11 @@ date = input("Enter the departure date (YYYY-MM-DD): ")
 return_date = input("Enter the return date (YYYY-MM-DD): ")
 bucket_name = "bestpricenphu"
 
-def push_to_s3(bucket, data):
+def push_to_s3(bucket, data, date, return_date):
     session = boto3.Session()
     s3 = session.client('s3')
 
-   # convert scraped data to JSON
+    # convert scraped data to JSON
     json_data = json.dumps(data, indent=4)
 
     # create the s3 key
@@ -25,60 +26,75 @@ def push_to_s3(bucket, data):
     # write data to S3
     s3.put_object(Bucket=bucket, Body=json_data, Key=json_key)
 
+# Calculate the date ranges
+date_input = pd.to_datetime(date)
+start_date = date_input - timedelta(days=3)
+end_date = date_input + timedelta(days=3)
+
+return_date_input = pd.to_datetime(return_date)
+start_return_date = return_date_input - timedelta(days=3)
+end_return_date = return_date_input + timedelta(days=3)
+
+# Create date ranges
+departure_dates = pd.date_range(start=start_date, end=end_date).tolist()
+return_dates = pd.date_range(start=start_return_date, end=end_return_date).tolist()
+
 driver = webdriver.Chrome()
 
-url = f"https://www.kayak.com/flights/{origin}-{destination}/{date}/{return_date}?sort=price_a"
+for date in departure_dates:
+    for return_date in return_dates:
+        date_str = date.strftime('%Y-%m-%d')
+        return_date_str = return_date.strftime('%Y-%m-%d')
 
-driver.get(url)
-sleep(10)
+        url = f"https://www.kayak.com/flights/{origin}-{destination}/{date_str}/{return_date_str}?sort=price_a"
 
-flight_rows = driver.find_elements(By.XPATH,'//div[@class="nrc6-inner"]')
+        driver.get(url)
+        sleep(10)
 
-flights_data = []
+        flight_rows = driver.find_elements(By.XPATH,'//div[@class="nrc6-inner"]')
 
-for element in flight_rows:
-    # Initialize an empty dictionary to hold flight data
-    flight_data = {}
+        for flight_row in flight_rows:
+            flight_data = {}
+            flight_segments = flight_row.find_elements(By.XPATH, './/li[@class="hJSA-item"]')
 
-    # Price
-    price = element.find_element(By.CSS_SELECTOR, "div.nrc6-price-section div.f8F1-price-text-container").text
-    flight_data["price"] = price
+            flight_data["flights"] = []
+            for segment in flight_segments:
+                # Initialize an empty dictionary for this segment
+                segment_data = {}
 
-    flight_segments = element.find_elements(By.XPATH, './/li[@class="hJSA-item"]')
+                try:
+                    # Company names
+                    company_names = segment.find_element(By.CSS_SELECTOR, "div.c_cgF.c_cgF-mod-variant-default").text
+                    segment_data["company_names"] = company_names
 
-    flight_data["flights"] = []
-    for segment in flight_segments:
-        # Initialize an empty dictionary for this segment
-        segment_data = {}
+                    # Start and end times
+                    times = segment.find_element(By.CSS_SELECTOR, "div.vmXl.vmXl-mod-variant-large").text.replace("\u2013", "-")
+                    times = times.replace(" am", "am ").replace(" pm", "pm ").replace("-", "- ")
+                    segment_data["start_end_time"] = times
 
-        # Company names
-        company_names = segment.find_element(By.CSS_SELECTOR, "div.c_cgF.c_cgF-mod-variant-default").text
-        segment_data["company_names"] = company_names
+                    # Duration
+                    duration = segment.find_element(By.CSS_SELECTOR, "div.xdW8 .vmXl.vmXl-mod-variant-default").text.replace("\u2013", "-")
+                    segment_data["duration"] = duration
 
-        # Start and end times
-        times = segment.find_element(By.CSS_SELECTOR, "div.vmXl.vmXl-mod-variant-large").text.replace("\u2013", "-")
-        times = times.replace(" am", "am ").replace(" pm", "pm ").replace("-", "- ")
-        segment_data["start_end_time"] = times
+                    # Number of stops
+                    num_stops = segment.find_element(By.CSS_SELECTOR, "div.vmXl.vmXl-mod-variant-default").text
+                    segment_data["num_stops"] = num_stops
 
-        # Duration
-        duration = segment.find_element(By.CSS_SELECTOR, "div.xdW8 .vmXl.vmXl-mod-variant-default").text.replace("\u2013", "-")
-        segment_data["duration"] = duration
+                    # Stop destinations
+                    try:
+                        stop_destinations = segment.find_element(By.CSS_SELECTOR, "div.JWEO div.c_cgF.c_cgF-mod-variant-default").text
+                        segment_data["stop_destinations"] = stop_destinations
+                    except Exception as e:
+                        print(f"An exception occurred: {e}")
+                        segment_data["stop_destinations"] = "Non-stop"
 
-        # Number of stops
-        num_stops = segment.find_element(By.CSS_SELECTOR, "div.vmXl.vmXl-mod-variant-default").text
-        segment_data["num_stops"] = num_stops
+                except Exception as e:
+                    print(f"An exception occurred: {e}")
 
-        # Stop destinations
-        stop_destinations = segment.find_element(By.CSS_SELECTOR, "div.JWEO div.c_cgF.c_cgF-mod-variant-default").text
-        segment_data["stop_destinations"] = stop_destinations
+                # Add this segment's data to the flight data
+                flight_data["flights"].append(segment_data)
 
-        # Add this segment's data to the flight data
-        flight_data["flights"].append(segment_data)
-
-    # Add the dictionary to the flights_data list
-    flights_data.append(flight_data)
+            # Now push the collected data to S3 bucket
+            push_to_s3(bucket_name, flight_data, date_str, return_date_str)
 
 driver.quit()  # Don't forget to quit the driver at the end of the script
-
-# Now push the collected data to S3 bucket
-push_to_s3(bucket_name, flights_data)
