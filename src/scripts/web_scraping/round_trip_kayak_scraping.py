@@ -1,6 +1,8 @@
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 import json
 import boto3
 from datetime import datetime, timedelta
@@ -49,17 +51,20 @@ for date in departure_dates:
         url = f"https://www.kayak.com/flights/{origin}-{destination}/{date_str}/{return_date_str}?sort=price_a"
 
         driver.get(url)
-        sleep(10)
+
+        # Add explicit wait here
+        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//div[@class="nrc6-inner"]')))
 
         flight_rows = driver.find_elements(By.XPATH,'//div[@class="nrc6-inner"]')
 
-        for flight_row in flight_rows:
+        for i in range(len(flight_rows)):
             flight_data = {}
+            flight_row = driver.find_element(By.XPATH, f'//div[@class="nrc6-inner"][{i+1}]')
             flight_segments = flight_row.find_elements(By.XPATH, './/li[@class="hJSA-item"]')
 
             flight_data["flights"] = []
-            for segment in flight_segments:
-                # Initialize an empty dictionary for this segment
+            for j in range(len(flight_segments)):
+                segment = driver.find_element(By.XPATH, f'//div[@class="nrc6-inner"][{i+1}]//li[@class="hJSA-item"][{j+1}]')
                 segment_data = {}
 
                 try:
@@ -91,10 +96,8 @@ for date in departure_dates:
                 except Exception as e:
                     print(f"An exception occurred: {e}")
 
-                # Add this segment's data to the flight data
                 flight_data["flights"].append(segment_data)
 
-            # Now push the collected data to S3 bucket
             push_to_s3(bucket_name, flight_data, date_str, return_date_str)
 
 driver.quit()  # Don't forget to quit the driver at the end of the script
