@@ -23,7 +23,7 @@ def push_to_s3(bucket, data, date, return_date):
 
     # create the s3 key
     current_time = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
-    json_key = f'data/raw/kayak/round-way/{current_time}_flight_{origin}_{destination}_{date}_{return_date}_raw_data.json'
+    json_key = f'data/raw/kayak/round-/{current_time}_flight_{origin}_{destination}_{date}_{return_date}_raw_data.json'
 
     # write data to S3
     s3.put_object(Bucket=bucket, Body=json_data, Key=json_key)
