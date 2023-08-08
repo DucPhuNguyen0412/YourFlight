@@ -7,8 +7,11 @@ def create_index(index_name):
         "mappings": {
             "properties": {
                 "price": { "type": "double" },
+                "company_names": { "type": "text" },
+                "start_end_time": { "type": "text" },
+                "duration": { "type": "text" },
                 "num_stops": { "type": "integer" },
-                # Add other fields here
+                "stop_destinations": { "type": "text" }
             }
         }
     }
