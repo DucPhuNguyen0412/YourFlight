@@ -1,10 +1,23 @@
+import os
+import boto3
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import regexp_replace, split, explode
 
+# Set up necessary packages
+os.environ['PYSPARK_SUBMIT_ARGS'] = '--packages org.apache.hadoop:hadoop-aws:3.2.0,com.amazonaws:aws-java-sdk:1.11.375 pyspark-shell'
+
+# Get AWS Credentials
+session = boto3.Session(profile_name='default')
+credentials = session.get_credentials()
+current_credentials = credentials.get_frozen_credentials()
+
 def main():
-    # Create a Spark session
+    # Create a Spark session with AWS credentials
     spark = SparkSession.builder \
         .appName("S3DataProcessor") \
+        .config("spark.hadoop.fs.s3a.access.key", current_credentials.access_key) \
+        .config("spark.hadoop.fs.s3a.secret.key", current_credentials.secret_key) \
+        .config("spark.hadoop.fs.s3a.impl", "org.apache.hadoop.fs.s3a.S3AFileSystem") \
         .getOrCreate()
 
     # Read one-way data from the directory containing all one-way JSON files
@@ -31,7 +44,7 @@ def transform_one_way_data(df):
         .withColumn("num_stops", split("num_stops", " ")[0].cast("int"))
 
 def transform_round_trip_data(df):
-    # Remove $ from price and convert to double, explode the nested flights array, extract number of stops as integer
+    # Remove $ from price and convert to double, remove the nested flights array, extract number of stops as integer
     return df.withColumn("price", regexp_replace("price", "\\$", "").cast("double")) \
         .withColumn("flights", explode("flights")) \
         .select("price", "flights.*") \
