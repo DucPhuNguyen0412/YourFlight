@@ -40,5 +40,5 @@ bucket="bestpricenphu"
 # Loop over each index in the array
 for (( i=0; i<$length; i++ )); do
     # Run the python script with each set of parameters
-    python3 /Users/macbook/Documents/Documents_MacBook_Pro/ISTT/AirflowTutorial/src/scripts/web_scraping/kayak_scraping.py "${departure_array[$i]}" "${destination_array[$i]}" "${depart_date_array[$i]}" "${return_date_array[$i]}" "${travelers_array[$i]}" "${cabin_class_array[$i]}" "${flight_type_array[$i]}" "$bucket" >> script.log 2>&1
+    python "D:/FlightPrices/eCommData-Processing/src/scripts/web_scraping/kayak_scraping.py" "${departure_array[$i]}" "${destination_array[$i]}" "${depart_date_array[$i]}" "${return_date_array[$i]}" "${travelers_array[$i]}" "${cabin_class_array[$i]}" "${flight_type_array[$i]}" "$bucket" >> script.log 2>&1
 done

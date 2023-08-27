@@ -18,14 +18,14 @@ def push_to_s3(bucket, data, date, return_date):
     session = boto3.Session()
     s3 = session.client('s3')
 
-    # convert scraped data to JSON
+    # Convert scraped data to JSON
     json_data = json.dumps(data, indent=4)
 
-    # create the s3 key
+    # Create the S3 key
     current_time = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
     json_key = f'data/raw/google-flights/round-/{current_time}_flight_{origin}_{destination}_{date}_{return_date}_raw_data.json'
 
-    # write data to S3
+    # Write data to S3
     s3.put_object(Bucket=bucket, Body=json_data, Key=json_key)
 
 # Calculate the date ranges
@@ -48,11 +48,13 @@ for date in departure_dates:
         date_str = date.strftime('%Y-%m-%d')
         return_date_str = return_date.strftime('%Y-%m-%d')
 
-        url = f"https://www.google.com/flights?hl=en#flt={origin}.{destination}.{date_str}*{destination}.{origin}.{return_date_str}"
+        # Updated Google Flights URL format
+        url = f'https://www.google.com/travel/flights?hl=en&q=Flights%20to%20{destination}%20from%20{origin}%20on%20{date_str}%20returning%20on%20{return_date_str}'
 
         driver.get(url)
 
         # Add explicit wait here
+        # Note: You will need to replace 'YOUR XPATH FOR FLIGHT LISTINGS HERE' with the appropriate XPATH
         WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, 'YOUR XPATH FOR FLIGHT LISTINGS HERE')))
 
         flight_rows = driver.find_elements(By.XPATH, 'YOUR XPATH FOR FLIGHT LISTINGS HERE')
@@ -63,6 +65,7 @@ for date in departure_dates:
             flight_data = {}
 
             # Extract the details (like airlines, departure and arrival times, duration, stops, etc.)
+            # Note: You will need to complete this portion
             flights_data.append(flight_data)
 
         push_to_s3(bucket_name, flights_data, date_str, return_date_str)
