@@ -100,4 +100,4 @@ for date in departure_dates:
 
             push_to_s3(bucket_name, flight_data, date_str, return_date_str)
 
-driver.quit()  # Don't forget to quit the driver at the end of the script
+driver.quit() 
